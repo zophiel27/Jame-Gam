@@ -5,6 +5,11 @@ public class ArrowScript : MonoBehaviour
     private Vector3 startPosition;
     private Rigidbody2D rb;
 
+    void Update()
+    {
+
+    }
+
     void Start()
     {
         startPosition = transform.position; // Store the original position
