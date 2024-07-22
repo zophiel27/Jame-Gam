@@ -900,7 +900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   existingArrow: {fileID: 1871231592}
   shootingPoint: {fileID: 1871231597}
-  arrowSpeed: 30
+  arrowSpeed: 40
 --- !u!1 &1871231592 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 637711020613168077, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
@@ -981,7 +981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5772240177248417174, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
       propertyPath: m_Constraints
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5772240177248417174, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
       propertyPath: m_CollisionDetection
