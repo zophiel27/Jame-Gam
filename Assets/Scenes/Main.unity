@@ -900,7 +900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   existingArrow: {fileID: 1871231592}
   shootingPoint: {fileID: 1871231597}
-  arrowSpeed: 40
+  arrowSpeed: 60
 --- !u!1 &1871231592 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 637711020613168077, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
@@ -937,43 +937,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1051749921043042904, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.491
+      value: -1.48
       objectReference: {fileID: 0}
     - target: {fileID: 1051749921043042904, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.757
+      value: -2.97
       objectReference: {fileID: 0}
     - target: {fileID: 1051749921043042904, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.427
+      value: 1.41
       objectReference: {fileID: 0}
     - target: {fileID: 1051749921043042904, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99904525
+      value: 0.9957079
       objectReference: {fileID: 0}
     - target: {fileID: 1051749921043042904, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.039747395
+      value: 0.051374327
       objectReference: {fileID: 0}
     - target: {fileID: 1051749921043042904, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00072079437
+      value: -0.008329837
       objectReference: {fileID: 0}
     - target: {fileID: 1051749921043042904, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.018117068
+      value: -0.076531276
       objectReference: {fileID: 0}
     - target: {fileID: 1051749921043042904, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 4.554
+      value: 5.799
       objectReference: {fileID: 0}
     - target: {fileID: 1051749921043042904, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.166
+      value: -1.408
       objectReference: {fileID: 0}
     - target: {fileID: 1051749921043042904, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 2.084
+      value: -8.862
       objectReference: {fileID: 0}
     - target: {fileID: 5772240177248417174, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
       propertyPath: m_Material
@@ -981,7 +981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5772240177248417174, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
       propertyPath: m_Constraints
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5772240177248417174, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
       propertyPath: m_CollisionDetection
