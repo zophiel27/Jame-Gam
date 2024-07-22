@@ -358,7 +358,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 703952259}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 82a268b7687e25e49bbba369c2536083, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -898,10 +898,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be37df4c27df9c45bef990c5a7654e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowPrefab: {fileID: 637711020613168077, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
   existingArrow: {fileID: 1871231592}
-  shootingPoint: {fileID: 775199752}
-  arrowSpeed: 50
+  shootingPoint: {fileID: 1871231597}
+  arrowSpeed: 30
 --- !u!1 &1871231592 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 637711020613168077, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
@@ -919,6 +918,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e12306760cb99404f98a1196ae0584da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1871231597 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1051749921043042904, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
+  m_PrefabInstance: {fileID: 1269841730008090993}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1269841730008090993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -974,26 +978,34 @@ PrefabInstance:
     - target: {fileID: 5772240177248417174, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 6200000, guid: 1afd093af703cb6478a9daa7bdc48d28, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 5772240177248417174, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
+      propertyPath: m_Constraints
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5772240177248417174, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8906506217389630962, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
       propertyPath: m_Size.x
-      value: 0.42304868
+      value: 0.16761321
       objectReference: {fileID: 0}
     - target: {fileID: 8906506217389630962, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
       propertyPath: m_Size.y
-      value: 4.1573696
+      value: 4.1187897
+      objectReference: {fileID: 0}
+    - target: {fileID: 8906506217389630962, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8906506217389630962, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
       propertyPath: m_Offset.x
-      value: -0.092981905
+      value: -0.08054417
       objectReference: {fileID: 0}
     - target: {fileID: 8906506217389630962, guid: 0cf9bcc5061fa2b44bdc1f3c1512596c, type: 3}
       propertyPath: m_Offset.y
-      value: -0.06956279
+      value: -0.05027306
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

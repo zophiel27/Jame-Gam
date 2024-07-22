@@ -20,6 +20,12 @@ public class ArrowScript : MonoBehaviour
             rb.angularVelocity = 0f; // Reset angular velocity if any
             transform.position = startPosition; // Reset position
             transform.rotation = Quaternion.identity; // Reset rotation if needed
+            //rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+        }
+        else if (collision.gameObject.CompareTag("Wall"))
+        {
+            float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
     }
 }

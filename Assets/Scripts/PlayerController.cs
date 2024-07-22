@@ -23,8 +23,13 @@ public class PlayerController : MonoBehaviour
     {
         if (existingArrow && shootingPoint)
         {
-            existingArrow.transform.position = shootingPoint.position; // Reposition the existing arrow
-            Rigidbody2D rb = existingArrow.GetComponent<Rigidbody2D>();
+            
+            //instantiate
+
+            GameObject arrow = Instantiate(existingArrow, shootingPoint.position, shootingPoint.rotation);
+            Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
+            //delete existing arrow
+            //Destroy(existingArrow);
             if (rb)
             {
                 rb.velocity = transform.right * arrowSpeed; // Apply velocity
