@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Floor
   - Wall
+  - FxTemporaire
+  - Arrow
+  - Bomb
   layers:
   - Default
   - TransparentFX

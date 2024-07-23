@@ -9,9 +9,17 @@ public class BombScript : MonoBehaviour
     public float power = 100;
     public LayerMask affected_layer; // if we want only specific items to be affected by the bomb change this else khair hai 
     public GameObject explosion_effect;
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Arrow")
+        {
+            Explode();
+        }
+    }
 
     [ContextMenu("Explode Bomb")] // will be invoked later by another event but for now run manually in editor
-    void Explode(){
+    public void Explode(){
         Collider2D[] objects_hit = Physics2D.OverlapCircleAll(transform.position, aoe);
 
         foreach (Collider2D obj in objects_hit) {
@@ -24,7 +32,8 @@ public class BombScript : MonoBehaviour
         Destroy(explosion_effect_instance,7);
         Destroy(gameObject);
     }
-
+    //ON COLIDE WITH ARROW
+    
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

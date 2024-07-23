@@ -4,7 +4,6 @@ public class ArrowScript : MonoBehaviour
 {
     private Vector3 startPosition;
     private Rigidbody2D rb;
-
     void Update()
     {
         if (true) // Check for left mouse button click or screen tap
