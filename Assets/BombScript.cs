@@ -5,21 +5,10 @@ using UnityEngine;
 
 public class BombScript : MonoBehaviour
 {
-    // Start is called before the first frame update
     public float aoe = 2;
     public float power = 100;
     public LayerMask affected_layer; // if we want only specific items to be affected by the bomb change this else khair hai 
     public GameObject explosion_effect;
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
 
     [ContextMenu("Explode Bomb")] // will be invoked later by another event but for now run manually in editor
     void Explode(){
