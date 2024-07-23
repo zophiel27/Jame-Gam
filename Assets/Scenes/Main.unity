@@ -239,6 +239,7 @@ GameObject:
   - component: {fileID: 322673397}
   - component: {fileID: 322673396}
   - component: {fileID: 322673399}
+  - component: {fileID: 322673400}
   m_Layer: 0
   m_Name: TNT
   m_TagString: Untagged
@@ -352,7 +353,7 @@ Transform:
   m_GameObject: {fileID: 322673395}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.65, y: -4, z: 0}
+  m_LocalPosition: {x: 1.663, y: -4.235, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -385,6 +386,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &322673400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322673395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccce89c35b618b24d90405c655a9a74b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aoe: 2
+  power: 500
+  affected_layer:
+    serializedVersion: 2
+    m_Bits: 0
+  explosion_effect: {fileID: 3208812394864296246, guid: 9240a7fa6e9f74f48a7f7bf1bfe6345c, type: 3}
 --- !u!1 &643368834
 GameObject:
   m_ObjectHideFlags: 0
