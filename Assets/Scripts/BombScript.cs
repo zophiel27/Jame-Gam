@@ -7,16 +7,9 @@ public class BombScript : MonoBehaviour
 {
     public float aoe = 2;
     public float power = 100;
-    public LayerMask affected_layer; // if we want only specific items to be affected by the bomb change this else khair hai 
+    //public LayerMask affected_layer; // if we want only specific items to be affected by the bomb change this else khair hai 
     public GameObject explosion_effect;
     
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Arrow")
-        {
-            Explode();
-        }
-    }
 
     [ContextMenu("Explode Bomb")] // will be invoked later by another event but for now run manually in editor
     public void Explode(){

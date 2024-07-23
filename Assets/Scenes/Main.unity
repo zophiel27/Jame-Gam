@@ -2222,6 +2222,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2998284332014226096, guid: 705fd614ccdfa2849bbdb3c41989d5a4, type: 3}
+      propertyPath: affected_layer.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6175184098926381822, guid: 705fd614ccdfa2849bbdb3c41989d5a4, type: 3}
       propertyPath: m_Name
       value: TNT
@@ -2232,11 +2236,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6253343215943144026, guid: 705fd614ccdfa2849bbdb3c41989d5a4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.092
+      value: 1.099
       objectReference: {fileID: 0}
     - target: {fileID: 6253343215943144026, guid: 705fd614ccdfa2849bbdb3c41989d5a4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.175
+      value: -4.23
       objectReference: {fileID: 0}
     - target: {fileID: 6253343215943144026, guid: 705fd614ccdfa2849bbdb3c41989d5a4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2272,11 +2276,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6990462443014616054, guid: 705fd614ccdfa2849bbdb3c41989d5a4, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9025839227325291076, guid: 705fd614ccdfa2849bbdb3c41989d5a4, type: 3}
       propertyPath: m_Constraints
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2514,7 +2518,7 @@ Transform:
   m_GameObject: {fileID: 1781820723}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.084, y: -2.944, z: -0.02947505}
+  m_LocalPosition: {x: 2.132, y: -3.038, z: -0.02947505}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
