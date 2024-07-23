@@ -7,7 +7,13 @@ public class ArrowScript : MonoBehaviour
 
     void Update()
     {
-
+        if (true) // Check for left mouse button click or screen tap
+            {
+                Vector2 pos=transform.position;
+                Vector2 tapPos=Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector2 direction= tapPos-pos;
+                transform.right=direction;
+            }
     }
 
     void Start()
@@ -25,7 +31,6 @@ public class ArrowScript : MonoBehaviour
             rb.angularVelocity = 0f; // Reset angular velocity if any
             transform.position = startPosition; // Reset position
             transform.rotation = Quaternion.identity; // Reset rotation if needed
-            //rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
         }
         else if (collision.gameObject.CompareTag("Wall"))
         {
