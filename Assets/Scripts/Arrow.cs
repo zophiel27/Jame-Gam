@@ -24,7 +24,7 @@ public class ArrowScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Floor")) // Assuming the floor has a tag "Floor"
         {
-            FindObjectOfType<PlayerController>().ResetArrowInAir(); // Reset the flag in PlayerController
+            FindObjectOfType<bow>().ResetArrowInAir(); // Reset the flag in PlayerController
             rb.velocity = Vector2.zero; // Reset velocity
             rb.angularVelocity = 0f; // Reset angular velocity if any
             transform.position = startPosition; // Reset position

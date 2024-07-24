@@ -25,8 +25,12 @@ public class BombScript : MonoBehaviour
         Destroy(explosion_effect_instance,7);
         Destroy(gameObject);
     }
-    //ON COLIDE WITH ARROW
-    
+    //ON COLIDE with arrow 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Arrow"))
+            Explode();
+    }
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
