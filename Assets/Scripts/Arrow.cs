@@ -4,7 +4,6 @@ public class ArrowScript : MonoBehaviour
 {
     private Vector3 startPosition;
     private Rigidbody2D rb;
-    public BombScript bombScript;
     void Update()
     {
         if (rb.velocity != Vector2.zero)
@@ -25,17 +24,18 @@ public class ArrowScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Floor")) // Assuming the floor has a tag "Floor"
         {
             FindObjectOfType<bow>().ResetArrowInAir(); // Reset the flag in PlayerController
-            rb.velocity = Vector2.zero; // Reset velocity
-            rb.angularVelocity = 0f; // Reset angular velocity if any
-            transform.position = startPosition; // Reset position
-            transform.rotation = Quaternion.identity; // Reset rotation if needed
+            //rb.velocity = Vector2.zero; // Reset velocity
+            //rb.angularVelocity = 0f; // Reset angular velocity if any
+            //transform.position = startPosition; // Reset position
+            //transform.rotation = Quaternion.identity; // Reset rotation if needed
+            //float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
+            //transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            rb.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
         }
         else if (collision.gameObject.CompareTag("Wall"))
         {
             float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
-        else if (collision.gameObject.CompareTag("Bomb"))
-            bombScript.Explode();
     }
 }
