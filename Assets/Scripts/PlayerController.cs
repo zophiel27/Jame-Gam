@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject existingArrow; // Reference to the existing arrow in the scene
+    public GameObject arrowPrefab;
     public Transform shootingPoint;
     public float arrowSpeed = 10f;
     private bool arrowInAir = false; // Flag to track if the arrow is in the air
@@ -33,10 +33,10 @@ public class PlayerController : MonoBehaviour
 
     void ShootArrow()
     {
-        if (existingArrow && shootingPoint)
+        if (shootingPoint)
         {
             //instantiate
-            arrow = Instantiate(existingArrow, shootingPoint.position, shootingPoint.rotation);
+            arrow = Instantiate(arrowPrefab, shootingPoint.position, shootingPoint.rotation);
             another_arrow_exists = true;
             Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
             rb.constraints = RigidbodyConstraints2D.None;

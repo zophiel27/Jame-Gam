@@ -7,13 +7,11 @@ public class ArrowScript : MonoBehaviour
     public BombScript bombScript;
     void Update()
     {
-        if (true) // Check for left mouse button click or screen tap
-            {
-                Vector2 pos=transform.position;
-                Vector2 tapPos=Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                Vector2 direction= tapPos-pos;
-                transform.right=direction;
-            }
+        if (rb.velocity != Vector2.zero)
+        {
+            float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
     }
 
     void Start()

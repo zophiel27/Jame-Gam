@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8906506217389630962}
   m_Layer: 0
   m_Name: ArrowColider
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25,13 +25,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104844210760629029}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000011175871, y: 0.0000000018626451, z: -0.3826835, w: 0.9238795}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.012110986, y: -0.027727317, z: -0.71801484, w: 0.69536996}
+  m_LocalPosition: {x: 1.039, y: -0.197, z: 0.028}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1051749921043042904}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
+  m_LocalEulerAnglesHint: {x: -1.316, y: -3.208, z: -91.799}
 --- !u!61 &8906506217389630962
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -64,7 +64,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.098895274, y: -0.059453845}
+  m_Offset: {x: -0.0717393, y: -0.933148}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -75,7 +75,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.15407725, y: 3.8740342}
+  m_Size: {x: 0.07718444, y: 2.1705072}
   m_EdgeRadius: 0
 --- !u!1 &637711020613168077
 GameObject:
@@ -87,9 +87,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1051749921043042904}
   - component: {fileID: 5772240177248417174}
+  - component: {fileID: 6041183731480441016}
   m_Layer: 0
   m_Name: Arrow
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +103,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 637711020613168077}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.039747395, y: 0.00072079437, z: 0.018117068, w: 0.99904525}
+  m_LocalRotation: {x: 0.039750446, y: 0.0007246932, z: 0.01811342, w: 0.99904525}
   m_LocalPosition: {x: -1.491, y: -2.757, z: 1.427}
   m_LocalScale: {x: 0.3486, y: 0.4014, z: 1}
   m_ConstrainProportionsScale: 0
@@ -138,6 +139,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6041183731480441016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637711020613168077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e12306760cb99404f98a1196ae0584da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombScript: {fileID: 0}
 --- !u!1 &1879494692362477753
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +164,7 @@ GameObject:
   - component: {fileID: 3026826615649183124}
   m_Layer: 0
   m_Name: ArrowSprite
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
