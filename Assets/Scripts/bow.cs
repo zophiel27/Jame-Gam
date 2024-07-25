@@ -17,13 +17,13 @@ public class bow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!isMouseDown){
+        if(isMouseDown){
             Vector2 pos=transform.position;
             Vector2 tapPos=Camera.main.ScreenToWorldPoint(Input.mousePosition);
             
-            Vector2 mouseOffset = new Vector2(0, 0.3f);
+            Vector2 mouseOffset = new Vector2(0, 0);
             tapPos += mouseOffset;
-            Vector2 direction= tapPos-pos;
+            Vector2 direction= pos-tapPos;
             transform.right=direction;
         }
         

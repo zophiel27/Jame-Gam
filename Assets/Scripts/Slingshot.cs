@@ -40,7 +40,6 @@ public class Slingshot : MonoBehaviour
     private void OnMouseDown()
     {
         isMouseDown = true;
-        isMouseDown = true;
         if (Bow != null)
         {
             Bow.SetMouseDown(true);
