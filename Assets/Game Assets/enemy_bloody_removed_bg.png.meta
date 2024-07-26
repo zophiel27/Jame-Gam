@@ -1,0 +1,496 @@
+fileFormatVersion: 2
+guid: 97970193f5c391d47b4b8f480e3e00bd
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: right_upper_arm
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 281
+        width: 58
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdff1733d368a434dbbc2853e6ef54e3
+      internalID: -737976511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: xx_head
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 340
+        width: 73
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11354da74bcfae64c87b152c35b875ab
+      internalID: -1375986986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: head
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 349
+        width: 77
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55c3516500b3b4c4aa02c695e4797eb0
+      internalID: 359027845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloody_torso
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 187
+        width: 65
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff485d7001b0044793ac6f13c235657
+      internalID: -1170667607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloody_right_upper_arm
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 281
+        width: 66
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcaf73d416fa4c54aba7a83f859f1c61
+      internalID: -269212636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: right_lower_arm
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 262
+        width: 67
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1dcacb2a28a2247a5d6ff7ca4080f1
+      internalID: -507287993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloody_left_lower_arm
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 280
+        width: 64
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16bbd27aa09fa0478fe63b252a57140
+      internalID: -1051671216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: left_upper_arm
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 281
+        width: 59
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ae43e9b9ba5de544b79643107f6435c
+      internalID: -1865802022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torso
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 189
+        width: 62
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe0c77dd098eea48a64468b6c679bbd
+      internalID: -2033540037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: left_lower_arm
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 259
+        width: 67
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f9f2cf7cca05484284a20138775f4f6
+      internalID: -884605552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: left_upper_leg
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 105
+        width: 17
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 299376e69d5e4e645a44a87f10b7615e
+      internalID: 1315514251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: right_upper_leg
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 107
+        width: 17
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f53e8cd18555fd6449fdacfa9a2fba1a
+      internalID: 1531071990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: left_lower_leg
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0
+        width: 30
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 233a378bba4722c4a8d75bcad9ed86a4
+      internalID: -336509338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: right_lower_leg
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 2
+        width: 28
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1febd378878f254469316c461f0e911e
+      internalID: -1185861030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      bloody_left_lower_arm: -219200378
+      bloody_right_upper_arm: -2014528356
+      bloody_torso: 1481100061
+      enemy_bloody_removed_bg_0: -1921228655
+      enemy_bloody_removed_bg_10: 1608414140
+      enemy_bloody_removed_bg_11: 1814133194
+      enemy_bloody_removed_bg_12: -1948534079
+      enemy_bloody_removed_bg_13: 1933950343
+      enemy_bloody_removed_bg_15: 368471268
+      enemy_bloody_removed_bg_16: -1149862025
+      enemy_bloody_removed_bg_17: -875139567
+      enemy_bloody_removed_bg_18: 1125857664
+      enemy_bloody_removed_bg_19: -111009559
+      enemy_bloody_removed_bg_2: 1336108281
+      enemy_bloody_removed_bg_24: -359834625
+      enemy_bloody_removed_bg_25: -1569557940
+      enemy_bloody_removed_bg_26: 1121927481
+      enemy_bloody_removed_bg_27: 754843866
+      enemy_bloody_removed_bg_30: -1517191546
+      enemy_bloody_removed_bg_31: -724008359
+      enemy_bloody_removed_bg_33: 1519545267
+      enemy_bloody_removed_bg_34: 800738857
+      enemy_bloody_removed_bg_35: 975273757
+      enemy_bloody_removed_bg_36: -797111978
+      enemy_bloody_removed_bg_37: 821045673
+      enemy_bloody_removed_bg_38: -1610503909
+      enemy_bloody_removed_bg_39: -145854373
+      enemy_bloody_removed_bg_4: 2131362619
+      enemy_bloody_removed_bg_40: 1996634638
+      enemy_bloody_removed_bg_41: 453357464
+      enemy_bloody_removed_bg_42: -726783185
+      enemy_bloody_removed_bg_43: -442856358
+      enemy_bloody_removed_bg_44: -108998836
+      enemy_bloody_removed_bg_45: -895349757
+      enemy_bloody_removed_bg_46: -756237323
+      enemy_bloody_removed_bg_47: 2090842517
+      enemy_bloody_removed_bg_48: -999096549
+      enemy_bloody_removed_bg_49: -1825892188
+      enemy_bloody_removed_bg_5: -996492482
+      enemy_bloody_removed_bg_51: -1218117594
+      enemy_bloody_removed_bg_53: 957988445
+      enemy_bloody_removed_bg_55: 1338216385
+      enemy_bloody_removed_bg_56: 1250513336
+      enemy_bloody_removed_bg_57: -278983445
+      enemy_bloody_removed_bg_59: -1325532935
+      enemy_bloody_removed_bg_6: -1083246544
+      enemy_bloody_removed_bg_60: 1710987759
+      enemy_bloody_removed_bg_61: 1465260308
+      enemy_bloody_removed_bg_7: -214594863
+      enemy_bloody_removed_bg_8: 1522788932
+      enemy_bloody_removed_bg_9: -1162901386
+      head: -1467027266
+      left_lower_arm: -2136953160
+      left_lower_leg: -59543390
+      left_upper_arm: -245896084
+      left_upper_leg: 592928674
+      right_lower_arm: -1250551879
+      right_lower_leg: 1483037995
+      right_upper_arm: -737976511
+      right_upper_leg: 359020691
+      torso: -48844767
+      xx_head: -914956279
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
