@@ -166,7 +166,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: -0.0074304338, y: -0.3698171}
-  m_ConnectedAnchor: {x: 0.0025689607, y: 0.5071828}
+  m_ConnectedAnchor: {x: 0.0025696754, y: 0.5071826}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -835,8 +835,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3495352080067551610}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.0056097126, z: -0, w: 0.9999843}
-  m_LocalPosition: {x: -0.26, y: -3.14, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.413, y: -1.655, z: -0.02947505}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -851,7 +851,7 @@ Transform:
   - {fileID: 8930292308641917671}
   - {fileID: 5990881425902914931}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -0.643, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1804773102240172671
 MonoBehaviour:
   m_ObjectHideFlags: 0
