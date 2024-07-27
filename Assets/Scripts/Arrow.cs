@@ -39,6 +39,7 @@ public class ArrowScript : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Enemy"))
         {
+            FindObjectOfType<bow>().ResetArrowInAir(); // Reset the flag in PlayerController
             rb.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
         }
     }
