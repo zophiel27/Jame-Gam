@@ -9,6 +9,7 @@ TagManager:
   - FxTemporaire
   - Arrow
   - Bomb
+  - Enemy
   layers:
   - Default
   - TransparentFX
