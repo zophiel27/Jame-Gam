@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2998284332014226096}
   m_Layer: 0
   m_Name: TNT
-  m_TagString: Untagged
+  m_TagString: Bomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,7 +158,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!114 &2998284332014226096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,8 +172,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aoe: 2
-  power: 100
-  affected_layer:
-    serializedVersion: 2
-    m_Bits: 0
+  power: 200
   explosion_effect: {fileID: 3208812394864296246, guid: 9240a7fa6e9f74f48a7f7bf1bfe6345c, type: 3}
+  shake_script: {fileID: 0}
