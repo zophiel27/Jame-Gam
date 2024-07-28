@@ -187,7 +187,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef14c3b150c8c7f49a9fe3a5efbbcf2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xx_head_sprite: {fileID: -1375986986, guid: 97970193f5c391d47b4b8f480e3e00bd, type: 3}
 --- !u!1 &880363243889794389
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,6 +864,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloody_torso: {fileID: -1170667607, guid: 97970193f5c391d47b4b8f480e3e00bd, type: 3}
+  xx_head_sprite: {fileID: -1375986986, guid: 97970193f5c391d47b4b8f480e3e00bd, type: 3}
+  is_dead: 0
 --- !u!1 &4174973571697780850
 GameObject:
   m_ObjectHideFlags: 0

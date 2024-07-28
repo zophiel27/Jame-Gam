@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class HeadScript : MonoBehaviour
 {
-    public Sprite xx_head_sprite;
-
+    EnemyScript enemyScript;
+    private void Start()
+    {
+        enemyScript = transform.parent.GetComponent<EnemyScript>();
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Arrow"))
@@ -13,11 +16,15 @@ public class HeadScript : MonoBehaviour
             SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
             if (sr)
             {
-                sr.sprite = xx_head_sprite;
+                if (!enemyScript.is_dead)
+                    enemyScript.Mark_Dead();
                 HingeJoint2D joint = gameObject.GetComponent<HingeJoint2D>();
-                joint.enabled = false;
-                EnemyScript parent_script = gameObject.GetComponentInParent<EnemyScript>();
-                parent_script.Decapitate();
+                if (joint != null && joint.enabled)
+                {
+                    joint.enabled = false;
+                    EnemyScript parent_script = gameObject.GetComponentInParent<EnemyScript>();
+                    parent_script.Decapitate();
+                }
             }
         }
     }

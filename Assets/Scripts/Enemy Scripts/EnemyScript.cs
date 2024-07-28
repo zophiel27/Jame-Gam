@@ -7,6 +7,9 @@ using UnityEngine.WSA;
 public class EnemyScript : MonoBehaviour
 {
     public Sprite bloody_torso;
+    public Sprite xx_head_sprite;
+    public bool is_dead = false;
+
     public void Decapitate() {
         GameObject torso = transform.Find("Torso").gameObject;
         SpriteRenderer torso_sprite = torso.GetComponent<SpriteRenderer>();
@@ -29,5 +32,12 @@ public class EnemyScript : MonoBehaviour
             LowerRightArmScript s = lower_arm.GetComponent<LowerRightArmScript>();
             s.Bleed();
         }
+    }
+
+    public void Mark_Dead() {
+        GameObject head = transform.Find("Head").gameObject;
+        SpriteRenderer head_sprite = head.GetComponent<SpriteRenderer>();
+        head_sprite.sprite = xx_head_sprite;
+        is_dead = true;
     }
 }
