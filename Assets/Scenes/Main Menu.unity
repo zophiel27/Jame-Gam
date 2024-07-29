@@ -2015,6 +2015,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8319133b9b4335f418b2395d5ddfe8a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 1456987223}
+  - {fileID: 873008613}
+  - {fileID: 1683292513}
+  - {fileID: 1744140322}
+  - {fileID: 2101325932}
+  - {fileID: 1521783790}
 --- !u!1 &1521783788
 GameObject:
   m_ObjectHideFlags: 0
