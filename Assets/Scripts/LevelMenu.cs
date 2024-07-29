@@ -11,8 +11,6 @@ public class LevelMenu : MonoBehaviour
     private void Awake()
     {
         int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel",1);
-        //PlayerPrefs.SetInt("UnlockedLevel",1);
-        //PlayerPrefs.SetInt("ReachedLevel",1);
         for(int i=0; i<buttons.Length; i++)
         {
             if(i+1>unlockedLevel)
@@ -30,5 +28,13 @@ public class LevelMenu : MonoBehaviour
     {
         string levelName = "Level " + levelId;
         SceneManager.LoadScene(levelName);
+    }
+     [ContextMenu("Reset Progress")]
+    public void ResetProgress()
+    {
+        PlayerPrefs.SetInt("UnlockedLevel", 1);
+        PlayerPrefs.SetInt("ReachedIndex", 0);
+        PlayerPrefs.Save();
+        Awake();
     }
 }

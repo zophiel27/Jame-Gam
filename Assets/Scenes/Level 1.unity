@@ -130,6 +130,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2084199723091892321, guid: e2f6c548ee8808948b73b17fd43470de, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084199723091892321, guid: e2f6c548ee8808948b73b17fd43470de, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084199723091892321, guid: e2f6c548ee8808948b73b17fd43470de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100818869617323164, guid: e2f6c548ee8808948b73b17fd43470de, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.97348
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100818869617323164, guid: e2f6c548ee8808948b73b17fd43470de, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.97348
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100818869617323164, guid: e2f6c548ee8808948b73b17fd43470de, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.97348
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100818869617323164, guid: e2f6c548ee8808948b73b17fd43470de, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100818869617323164, guid: e2f6c548ee8808948b73b17fd43470de, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.33
+      objectReference: {fileID: 0}
     - target: {fileID: 5554770525157170426, guid: e2f6c548ee8808948b73b17fd43470de, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.93
@@ -173,6 +205,10 @@ PrefabInstance:
     - target: {fileID: 6839004928482521219, guid: e2f6c548ee8808948b73b17fd43470de, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8287153722495496884, guid: e2f6c548ee8808948b73b17fd43470de, type: 3}
+      propertyPath: maxLength
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -580,6 +616,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7d97800514f4d4e8c6cd3122590140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemies: 3
+  arrows: 3
 --- !u!1 &974734755
 GameObject:
   m_ObjectHideFlags: 0

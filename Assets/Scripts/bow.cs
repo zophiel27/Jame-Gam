@@ -8,12 +8,20 @@ public class bow : MonoBehaviour
     public Transform shootingPoint;
     public float arrowSpeed = 10f;
     private bool arrowInAir = false; // Flag to track if the arrow is in the air
-    float time_to_dest = 500;
+    float time_to_dest = 1000;
     float curr_time = 0;
     bool another_arrow_exists = false;
     public GameObject arrow;
     private bool isMouseDown = false;
+    private GameScript gameScript;
+    private int arrowCount;
     GameObject NewArrow;
+    // Start is called before the first frame update
+    void Start()
+    {
+        gameScript = FindObjectOfType<GameScript>();
+        arrowCount = gameScript.arrows;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -52,8 +60,9 @@ public class bow : MonoBehaviour
 
     public void ShootArrow()
     {
-        if (shootingPoint && !another_arrow_exists && !arrowInAir) 
+        if (shootingPoint && !another_arrow_exists && !arrowInAir && arrowCount > 0) 
         {
+            arrowCount--;
             arrowInAir = true;
             //instantiate
             NewArrow = Instantiate(arrow, shootingPoint.position, shootingPoint.rotation);
@@ -65,6 +74,11 @@ public class bow : MonoBehaviour
                 rb.velocity = transform.right * arrowSpeed; // Apply velocity
             }
         }
+        else if (arrowCount <= 0)
+        {
+            Debug.Log("No arrows left");
+        }
+        
     }
     public void ResetArrowInAir()
     {

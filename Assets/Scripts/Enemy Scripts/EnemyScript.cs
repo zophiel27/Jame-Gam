@@ -35,6 +35,7 @@ public class EnemyScript : MonoBehaviour
     }
 
     public void Mark_Dead() {
+        FindObjectOfType<GameScript>().EnemyDied();
         GameObject head = transform.Find("Head").gameObject;
         SpriteRenderer head_sprite = head.GetComponent<SpriteRenderer>();
         head_sprite.sprite = xx_head_sprite;
