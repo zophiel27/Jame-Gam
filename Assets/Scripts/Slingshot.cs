@@ -10,11 +10,9 @@ public class Slingshot : MonoBehaviour
     public Transform IdlePosition;
     bool isMouseDown;
     public float maxLength; // max length of slingshot string
-    public Vector3 currentPosition;
+    private Vector3 currentPosition;
     private bow Bow; //reference to the bow script
     public float arrowSpeed;
-
-    
 
     void Start()
     {
@@ -23,8 +21,7 @@ public class Slingshot : MonoBehaviour
         UpdateStringPositions();  
         Bow = FindObjectOfType<bow>(); //finding the script
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         UpdateStringPositions();

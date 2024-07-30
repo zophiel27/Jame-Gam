@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class GameScript : MonoBehaviour
@@ -9,18 +10,20 @@ public class GameScript : MonoBehaviour
     public int enemies;//Set Enemies Publically for Each Level
     public int arrows;//Set Arrows Publically for Each Level
 
-    public bool arrowFired()
+    void Start()
+    {
+        FindObjectOfType<ArrowManager>().SetArrows(arrows);
+    }
+    public void ArrowFired()
     {
         arrows--;
-        if(arrows<=0){
-            return false;
-        }
-        else{
-            return true;
-        }
+        FindObjectOfType<ArrowManager>().SetArrows(arrows);
+
     }
     public void EnemyDied(){
         enemies--;
+        FindObjectOfType<ScoreManager>().AddPoints();
+
         Debug.Log("Enemies left: "+enemies);
         if(enemies<=0){
             UnlockNextLevel();

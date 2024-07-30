@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class bow : MonoBehaviour
 {
-
     public Transform shootingPoint;
     private bool arrowInAir = false; // Flag to track if the arrow is in the air
-    float time_to_dest = 1000;
+    float time_to_dest = 400;
     float curr_time = 0;
     bool another_arrow_exists = false;
     public GameObject arrow;
@@ -15,13 +14,13 @@ public class bow : MonoBehaviour
     private GameScript gameScript;
     private int arrowCount;
     GameObject NewArrow;
-    // Start is called before the first frame update
+    
     void Start()
     {
         gameScript = FindObjectOfType<GameScript>();
         arrowCount = gameScript.arrows;
     }
-    // Update is called once per frame
+    
     void Update()
     {
         if(isMouseDown){
@@ -57,11 +56,12 @@ public class bow : MonoBehaviour
         isMouseDown = isDown;
     }
 
-    public void ShootArrow(UnityEngine.Vector3 force)
+    public void ShootArrow(Vector3 force)
     {
         if (shootingPoint && !another_arrow_exists && !arrowInAir && arrowCount > 0) 
         {
             arrowCount--;
+            FindObjectOfType<GameScript>().ArrowFired();
             arrowInAir = true;
             //instantiate
             NewArrow = Instantiate(arrow, shootingPoint.position, shootingPoint.rotation);
