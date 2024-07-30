@@ -39,6 +39,10 @@ public class GameScript : MonoBehaviour
             PlayerPrefs.SetInt("ReachedIndex", SceneManager.GetActiveScene().buildIndex+1);
             PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("UnlockedLevel")+1);
             PlayerPrefs.Save();
+            Debug.Log(PlayerPrefs.GetInt("UnlockedLevel"));
         }
+    }
+    public void Back(){
+        SceneManager.LoadScene(0);
     }
 }

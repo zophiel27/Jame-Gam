@@ -6,8 +6,7 @@ public class bow : MonoBehaviour
 {
     public Transform shootingPoint;
     private bool arrowInAir = false; // Flag to track if the arrow is in the air
-    float time_to_dest = 400;
-    float curr_time = 0;
+    private float timer;
     bool another_arrow_exists = false;
     public GameObject arrow;
     private bool isMouseDown = false;
@@ -35,20 +34,16 @@ public class bow : MonoBehaviour
         
 
         if (another_arrow_exists)
-            curr_time++;
-        if (time_to_dest <= curr_time)
-        {
-            curr_time = 0;
-            another_arrow_exists = false;
-            Destroy(NewArrow);
-            arrowInAir = false;
-        }
-        // Shoots an arrow when screen is clicked
-        // if (Input.GetMouseButtonDown(0) && !another_arrow_exists && !arrowInAir)
-        // {
-        //     ShootArrow();
-        //     arrowInAir = true; // Set the flag to true when an arrow is shot
-        // }
+            {
+                if (timer > 0)
+                    timer -= Time.deltaTime;
+                if (timer <= 0)
+                   { 
+                    another_arrow_exists = false;
+                    Destroy(NewArrow);
+                    arrowInAir = false;
+                    }
+            }
     }
     
     public void SetMouseDown(bool isDown)
@@ -60,6 +55,7 @@ public class bow : MonoBehaviour
     {
         if (shootingPoint && !another_arrow_exists && !arrowInAir && arrowCount > 0) 
         {
+            timer=3.5f;
             arrowCount--;
             FindObjectOfType<GameScript>().ArrowFired();
             arrowInAir = true;
