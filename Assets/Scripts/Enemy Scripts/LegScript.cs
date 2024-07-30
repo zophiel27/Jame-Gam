@@ -13,11 +13,15 @@ public class UpperLeftLegScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Arrow"))
         {
-            if (!enemyScript.is_dead)
-                enemyScript.Mark_Dead();
-            HingeJoint2D joint = GetComponent<HingeJoint2D>();
-            joint.enabled = false;
-            EnemyScript parent_script = gameObject.GetComponentInParent<EnemyScript>();
+            ArrowScript arrow_script = collision.gameObject.GetComponent<ArrowScript>();
+            if (arrow_script.is_active)
+            {
+                if (!enemyScript.is_dead)
+                    enemyScript.Mark_Dead();
+                HingeJoint2D joint = GetComponent<HingeJoint2D>();
+                joint.enabled = false;
+                EnemyScript parent_script = gameObject.GetComponentInParent<EnemyScript>();
+            }
         }
     }
 }

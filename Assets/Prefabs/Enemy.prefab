@@ -819,6 +819,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3419790365717287797}
   - component: {fileID: 1804773102240172671}
+  - component: {fileID: 8155054909440901367}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -866,6 +867,41 @@ MonoBehaviour:
   bloody_torso: {fileID: -1170667607, guid: 97970193f5c391d47b4b8f480e3e00bd, type: 3}
   xx_head_sprite: {fileID: -1375986986, guid: 97970193f5c391d47b4b8f480e3e00bd, type: 3}
   is_dead: 0
+--- !u!70 &8155054909440901367
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3495352080067551610}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00041234493, y: -0.41554427}
+  m_Size: {x: 1.220623, y: 3.1563382}
+  m_Direction: 0
 --- !u!1 &4174973571697780850
 GameObject:
   m_ObjectHideFlags: 0

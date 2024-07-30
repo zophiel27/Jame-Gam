@@ -5,6 +5,7 @@ public class ArrowScript : MonoBehaviour
     private Vector3 startPosition;
     private Rigidbody2D rb;
     private GameScript gameScript;
+    public bool is_active = true;
     void Update()
     {
         if (rb.velocity != Vector2.zero)
@@ -27,18 +28,30 @@ public class ArrowScript : MonoBehaviour
         {
             FindObjectOfType<bow>().ResetArrowInAir(); // Reset the flag in PlayerController
             rb.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
+            is_active = false;
         }
         else if (collision.gameObject.CompareTag("Wall"))
         {
             float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
-        else if (collision.gameObject.CompareTag("Enemy"))//Not Working, Maybe Due to Enemy breaking after hit
+        else if (collision.gameObject.CompareTag("Enemy"))//Not Working, Maybe Due to Enemy breaking after hit. No its because parent object didnt have a collider before, only the children objects did. Now it has a trigger, see code below
         {
             Debug.Log("Enemy hit");
             FindObjectOfType<bow>().ResetArrowInAir(); // Reset the flag in PlayerController
             rb.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
             gameScript.EnemyDied();
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collider) // Uncomment if u still need this code
+    {
+        if (collider.CompareTag("Enemy"))
+        {
+            Debug.Log("Enemy hit");
+            //FindObjectOfType<bow>().ResetArrowInAir();
+            //rb.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
+            //gameScript.EnemyDied();
         }
     }
 }

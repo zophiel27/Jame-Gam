@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using Cinemachine;
+using Unity.VisualScripting;
 
 public class BombScript : MonoBehaviour
 {
@@ -28,13 +29,27 @@ public class BombScript : MonoBehaviour
             Rigidbody2D obj_rigid_body = obj.GetComponent<Rigidbody2D>();
             if (obj_rigid_body != null)
                 obj_rigid_body.AddForce(direction_of_force * power);
+            if (obj.isTrigger)
+            {
+                if (obj.CompareTag("Enemy"))
+                {
+                    EnemyScript es = obj.GetComponent<EnemyScript>();
+                    if (!es.is_dead)
+                    {
+                        es.Mark_Dead();
+                        es.Make_Bleed("r");
+                        es.Make_Bleed("l");
+                        es.Decapitate();
+                    }
+                }
+            }
         }
         shake_script.ShakeCamera();
         GameObject explosion_effect_instance = Instantiate(explosion_effect, transform.position, Quaternion.identity);
         Destroy(explosion_effect_instance,3);
         Destroy(gameObject);
     }
-    //ON COLIDE with arrow 
+    //ON collision with arrow 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Arrow"))

@@ -16,14 +16,18 @@ public class HeadScript : MonoBehaviour
             SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
             if (sr)
             {
-                if (!enemyScript.is_dead)
-                    enemyScript.Mark_Dead();
-                HingeJoint2D joint = gameObject.GetComponent<HingeJoint2D>();
-                if (joint != null && joint.enabled)
+                ArrowScript arrow_script = collision.gameObject.GetComponent<ArrowScript>();
+                if (arrow_script.is_active)
                 {
-                    joint.enabled = false;
-                    EnemyScript parent_script = gameObject.GetComponentInParent<EnemyScript>();
-                    parent_script.Decapitate();
+                    if (!enemyScript.is_dead)
+                        enemyScript.Mark_Dead();
+                    HingeJoint2D joint = gameObject.GetComponent<HingeJoint2D>();
+                    if (joint != null && joint.enabled)
+                    {
+                        joint.enabled = false;
+                        EnemyScript parent_script = gameObject.GetComponentInParent<EnemyScript>();
+                        parent_script.Decapitate();
+                    }
                 }
             }
         }

@@ -9,7 +9,7 @@ public class EnemyScript : MonoBehaviour
     public Sprite xx_head_sprite;
     public bool is_dead = false;
 
-    public void Decapitate() {
+    public void Decapitate(bool splatter_blood = true) {
         GameObject torso = transform.Find("Torso").gameObject;
         SpriteRenderer torso_sprite = torso.GetComponent<SpriteRenderer>();
         TorsoScript s = torso.GetComponent<TorsoScript>();
