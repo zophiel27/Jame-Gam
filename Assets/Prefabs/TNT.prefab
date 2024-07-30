@@ -174,4 +174,3 @@ MonoBehaviour:
   aoe: 2
   power: 200
   explosion_effect: {fileID: 3208812394864296246, guid: 9240a7fa6e9f74f48a7f7bf1bfe6345c, type: 3}
-  shake_script: {fileID: 0}
