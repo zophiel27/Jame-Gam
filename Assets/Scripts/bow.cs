@@ -6,7 +6,6 @@ public class bow : MonoBehaviour
 {
 
     public Transform shootingPoint;
-    public float arrowSpeed = 10f;
     private bool arrowInAir = false; // Flag to track if the arrow is in the air
     float time_to_dest = 1000;
     float curr_time = 0;
@@ -58,7 +57,7 @@ public class bow : MonoBehaviour
         isMouseDown = isDown;
     }
 
-    public void ShootArrow()
+    public void ShootArrow(UnityEngine.Vector3 force)
     {
         if (shootingPoint && !another_arrow_exists && !arrowInAir && arrowCount > 0) 
         {
@@ -71,7 +70,8 @@ public class bow : MonoBehaviour
             rb.constraints = RigidbodyConstraints2D.None;
             if (rb)
             {
-                rb.velocity = transform.right * arrowSpeed; // Apply velocity
+                //rb.velocity = transform.right * arrowSpeed; // Apply velocity
+                rb.velocity = force;
             }
         }
         else if (arrowCount <= 0)

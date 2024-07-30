@@ -11,8 +11,10 @@ public class Slingshot : MonoBehaviour
     bool isMouseDown;
     public float maxLength; // max length of slingshot string
     public Vector3 currentPosition;
-    
     private bow Bow; //reference to the bow script
+    public float arrowSpeed;
+
+    
 
     void Start()
     {
@@ -35,6 +37,10 @@ public class Slingshot : MonoBehaviour
             currentPosition = Center.position + Vector3.ClampMagnitude(currentPosition - Center.position, maxLength);
             SetStrings(currentPosition);
         }
+        else
+        {
+            ResetStrings();
+        }
     }
 
     private void OnMouseDown()
@@ -51,7 +57,8 @@ public class Slingshot : MonoBehaviour
         if (Bow != null)
         {
             Bow.SetMouseDown(false);
-            Bow.ShootArrow(); // Call the shoot method
+            Vector3 arrowForce = -1 * arrowSpeed * (currentPosition - Center.position);
+            Bow.ShootArrow(arrowForce); 
         }
     }
     void ResetStrings()
