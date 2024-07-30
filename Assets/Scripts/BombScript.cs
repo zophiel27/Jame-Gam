@@ -39,7 +39,7 @@ public class BombScript : MonoBehaviour
                         es.Mark_Dead();
                         es.Make_Bleed("r");
                         es.Make_Bleed("l");
-                        es.Decapitate();
+                        es.Decapitate(false);
                     }
                 }
             }

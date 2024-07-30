@@ -14,7 +14,8 @@ public class EnemyScript : MonoBehaviour
         SpriteRenderer torso_sprite = torso.GetComponent<SpriteRenderer>();
         TorsoScript s = torso.GetComponent<TorsoScript>();
         torso_sprite.sprite = bloody_torso;
-        s.splatter();
+        if (splatter_blood)
+            s.splatter();
     }
 
     public void Make_Bleed(string side)
