@@ -9,6 +9,12 @@ public class EnemyScript : MonoBehaviour
     public Sprite xx_head_sprite;
     public bool is_dead = false;
     public GameObject last_collided_with_arrow = null;
+    private AudioSource audio_source;
+
+    private void Start()
+    {
+        audio_source = GetComponent<AudioSource>();
+    }
 
     public void Decapitate(bool splatter_blood = true) {
         GameObject torso = transform.Find("Torso").gameObject;
@@ -41,5 +47,10 @@ public class EnemyScript : MonoBehaviour
         SpriteRenderer head_sprite = head.GetComponent<SpriteRenderer>();
         head_sprite.sprite = xx_head_sprite;
         is_dead = true;
+    }
+
+    public void PlaySound() 
+    {
+        audio_source.Play();
     }
 }

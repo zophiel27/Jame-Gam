@@ -14,6 +14,7 @@ public class LowerRightArmScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Arrow") && enemyScript.last_collided_with_arrow != collision.gameObject)
         {
+            enemyScript.PlaySound();
             enemyScript.last_collided_with_arrow = collision.gameObject;
             ArrowScript arrow_script = collision.gameObject.GetComponent<ArrowScript>();
             if (arrow_script.is_active)
