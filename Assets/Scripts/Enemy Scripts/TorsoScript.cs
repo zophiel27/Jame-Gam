@@ -8,7 +8,7 @@ public class TorsoScript : MonoBehaviour
     [ContextMenu("splatter")]
     public void splatter() {
         GameObject blood_position = transform.Find("HeadBloodSplatter").gameObject;
-        GameObject blood_instance = Instantiate(blood_effect,blood_position.transform.position, Quaternion.identity);
+        GameObject blood_instance = Instantiate(blood_effect, blood_position.transform.position, Quaternion.Euler(270, 0, 0), blood_position.transform);
         ParticleSystem ps = blood_instance.GetComponent<ParticleSystem>();
         ps.Play();
         Destroy(blood_instance, ps.main.duration);
