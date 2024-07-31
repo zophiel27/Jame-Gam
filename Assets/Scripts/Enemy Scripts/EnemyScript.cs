@@ -8,6 +8,7 @@ public class EnemyScript : MonoBehaviour
     public Sprite bloody_torso;
     public Sprite xx_head_sprite;
     public bool is_dead = false;
+    public GameObject last_collided_with_arrow = null;
 
     public void Decapitate(bool splatter_blood = true) {
         GameObject torso = transform.Find("Torso").gameObject;

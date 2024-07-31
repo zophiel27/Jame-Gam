@@ -11,8 +11,9 @@ public class HeadScript : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Arrow"))
+        if (collision.gameObject.CompareTag("Arrow") && enemyScript.last_collided_with_arrow != collision.gameObject)
         {
+            enemyScript.last_collided_with_arrow = collision.gameObject;
             SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
             if (sr)
             {
