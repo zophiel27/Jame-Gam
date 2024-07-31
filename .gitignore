@@ -73,3 +73,5 @@ crashlytics-build.properties
 
 .vscode/
 .vsconfig
+
+/\ArrowRebound_BurstDebugInformation_DoNotShip
