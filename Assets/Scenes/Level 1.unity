@@ -405,6 +405,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3495352080067551610, guid: 480a8a34e4232b9438eef5f180c7f673, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4231607959145390251, guid: 480a8a34e4232b9438eef5f180c7f673, type: 3}
       propertyPath: m_AngleLimits.m_LowerAngle
       value: -10

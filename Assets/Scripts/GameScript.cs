@@ -12,6 +12,7 @@ public class GameScript : MonoBehaviour
     public GameObject levelCompletedUI;
     public GameObject gameOverUI;
     public GameObject playerUI;
+    private bool levelcleared = false;
 
     void Start()
     {
@@ -21,9 +22,9 @@ public class GameScript : MonoBehaviour
     {
         arrows--;
         FindObjectOfType<ArrowManager>().SetArrows(arrows);
-        if(arrows<=0){
+        if(arrows<=0 && !levelcleared){
             //After 5 seconds, Game Over UI will be shown
-            Invoke("GameOver", 4.5f);
+            Invoke(nameof(GameOver), 4.5f);
         }
 
     }
@@ -33,8 +34,9 @@ public class GameScript : MonoBehaviour
 
         Debug.Log("Enemies left: "+enemies);
         if(enemies<=0){
+            levelcleared = true;
             //After 2 seconds, Level Completed UI will be shown
-            Invoke("LevelCompleted", 2f);
+            Invoke(nameof(LevelCompleted), 2f);
         }
     }
     public void UnlockNextLevel(){

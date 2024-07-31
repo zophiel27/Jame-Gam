@@ -17,4 +17,7 @@ public class ScoreManager : MonoBehaviour
         score += 10;
         scoreText.text = "SCORE: " + score.ToString();
     }
+    public int GetPoints(){
+        return score;
+    }
 }
