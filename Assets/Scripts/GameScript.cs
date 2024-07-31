@@ -9,6 +9,9 @@ public class GameScript : MonoBehaviour
 {
     public int enemies;//Set Enemies Publically for Each Level
     public int arrows;//Set Arrows Publically for Each Level
+    public GameObject levelCompletedUI;
+    public GameObject gameOverUI;
+    public GameObject playerUI;
 
     void Start()
     {
@@ -18,6 +21,10 @@ public class GameScript : MonoBehaviour
     {
         arrows--;
         FindObjectOfType<ArrowManager>().SetArrows(arrows);
+        if(arrows<=0){
+            //After 5 seconds, Game Over UI will be shown
+            Invoke("GameOver", 4.5f);
+        }
 
     }
     public void EnemyDied(){
@@ -26,9 +33,8 @@ public class GameScript : MonoBehaviour
 
         Debug.Log("Enemies left: "+enemies);
         if(enemies<=0){
-            UnlockNextLevel();
-            SceneManager.LoadScene(0);
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1); For Next Level
+            //After 2 seconds, Level Completed UI will be shown
+            Invoke("LevelCompleted", 2f);
         }
     }
     public void UnlockNextLevel(){
@@ -44,5 +50,19 @@ public class GameScript : MonoBehaviour
     }
     public void Restart(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void NextLevel(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+    }
+    private void LevelCompleted(){
+        UnlockNextLevel();
+        levelCompletedUI.SetActive(true);
+        playerUI.SetActive(false);
+        //SceneManager.LoadScene(0);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1); For Next Level
+    }
+    private void GameOver(){
+        gameOverUI.SetActive(true);
+        playerUI.SetActive(false);
     }
 }

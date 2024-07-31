@@ -80,4 +80,8 @@ public class bow : MonoBehaviour
     {
         arrowInAir = false; // Reset the flag when called
     }
+    public bool checkArrow()
+    {
+        return another_arrow_exists;
+    }
 }

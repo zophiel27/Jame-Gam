@@ -25,7 +25,7 @@ public class Slingshot : MonoBehaviour
     void Update()
     {
         UpdateStringPositions();
-        if(isMouseDown)
+        if(isMouseDown && Bow.checkArrow() == false)
         {
             Vector3 mousePos = Input.mousePosition;
             mousePos.z = 10;
