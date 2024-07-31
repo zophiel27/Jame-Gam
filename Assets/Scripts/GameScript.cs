@@ -32,10 +32,9 @@ public class GameScript : MonoBehaviour
         }
     }
     public void UnlockNextLevel(){
-        if(SceneManager.GetActiveScene().buildIndex>=PlayerPrefs.GetInt("ReachedIndex"))
+        if(SceneManager.GetActiveScene().buildIndex>=PlayerPrefs.GetInt("UnlockedLevel"))
         {
-            PlayerPrefs.SetInt("ReachedIndex", SceneManager.GetActiveScene().buildIndex+1);
-            PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("UnlockedLevel")+1);
+            PlayerPrefs.SetInt("UnlockedLevel", SceneManager.GetActiveScene().buildIndex+1);
             PlayerPrefs.Save();
             Debug.Log("Unlocked Level"+PlayerPrefs.GetInt("UnlockedLevel"));
         }

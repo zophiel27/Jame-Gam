@@ -33,7 +33,6 @@ public class LevelMenu : MonoBehaviour
     public void ResetProgress()
     {
         PlayerPrefs.SetInt("UnlockedLevel", 1);
-        PlayerPrefs.SetInt("ReachedIndex", 0);
         PlayerPrefs.Save();
         Awake();
     }
