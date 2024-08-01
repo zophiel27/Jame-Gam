@@ -22,7 +22,7 @@ public class GameScript : MonoBehaviour
     {
         arrows--;
         FindObjectOfType<ArrowManager>().SetArrows(arrows);
-        if(arrows<=0 && !levelcleared){
+        if(arrows<=0){
             //After 5 seconds, Game Over UI will be shown
             Invoke(nameof(GameOver), 4.5f);
         }
@@ -64,7 +64,11 @@ public class GameScript : MonoBehaviour
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1); For Next Level
     }
     private void GameOver(){
-        gameOverUI.SetActive(true);
-        playerUI.SetActive(false);
+        if( !levelcleared)
+        {
+            gameOverUI.SetActive(true);
+            playerUI.SetActive(false);
+        }
+        
     }
 }
