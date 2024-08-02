@@ -24,6 +24,7 @@ public class TorsoScript : MonoBehaviour
         GameObject blood_position = transform.Find(game_object_name[key]).gameObject;
         GameObject blood_instance = Instantiate(blood_effect, blood_position.transform.position, Quaternion.Euler(direction[key], 0, 0), blood_position.transform);
         ParticleSystem ps = blood_instance.GetComponent<ParticleSystem>();
+        enemyScript.PlaySound(1);
         ps.Play();
         Destroy(blood_instance, ps.main.duration);
     }
@@ -38,7 +39,7 @@ public class TorsoScript : MonoBehaviour
                 if (!enemyScript.is_dead)
                 {
                     enemyScript.Mark_Dead();
-                    enemyScript.PlaySound();
+                    enemyScript.PlaySound(0);
                 }
                 if (collision.contacts.Length > 0)
                 {
@@ -47,6 +48,7 @@ public class TorsoScript : MonoBehaviour
                     Vector3 spawnPosition = new Vector3(collisionPosition.x, collisionPosition.y, 0f);
                     GameObject blood_instance = Instantiate(blood_effect, spawnPosition, Quaternion.Euler(180, 0, 0));
                     ParticleSystem ps = blood_instance.GetComponent<ParticleSystem>();
+                    enemyScript.PlaySound(1);
                     ps.Play();
                     Destroy(blood_instance, ps.main.duration);
                 }

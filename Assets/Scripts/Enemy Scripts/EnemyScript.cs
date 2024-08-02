@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ public class EnemyScript : MonoBehaviour
     public bool is_dead = false;
     public GameObject last_collided_with_arrow = null;
     private AudioSource audio_source;
+    public AudioClip[] audio_clips;
 
     private void Start()
     {
@@ -63,8 +65,9 @@ public class EnemyScript : MonoBehaviour
         is_dead = true;
     }
 
-    public void PlaySound() 
+    public void PlaySound(int indx) 
     {
+        audio_source.clip = audio_clips[indx];
         audio_source.Play();
     }
 }

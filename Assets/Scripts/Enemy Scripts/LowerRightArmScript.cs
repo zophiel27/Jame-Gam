@@ -21,7 +21,7 @@ public class LowerRightArmScript : MonoBehaviour
                 if (!enemyScript.is_dead)
                 {
                     enemyScript.Mark_Dead();
-                    enemyScript.PlaySound();
+                    enemyScript.PlaySound(0);
                 }
                 HingeJoint2D joint = GetComponent<HingeJoint2D>();
                 if (joint.enabled)

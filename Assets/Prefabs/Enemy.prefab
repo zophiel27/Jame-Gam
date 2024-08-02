@@ -967,6 +967,9 @@ MonoBehaviour:
   xx_head_sprite: {fileID: -1375986986, guid: 97970193f5c391d47b4b8f480e3e00bd, type: 3}
   is_dead: 0
   last_collided_with_arrow: {fileID: 0}
+  audio_clips:
+  - {fileID: 8300000, guid: c7eb02efd7d71d7498daa44113dc1f5c, type: 3}
+  - {fileID: 8300000, guid: 9213ca0156562f540ab424bdb02357ff, type: 3}
 --- !u!70 &8155054909440901367
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

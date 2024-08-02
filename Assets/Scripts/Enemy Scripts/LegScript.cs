@@ -18,6 +18,7 @@ public class UpperLeftLegScript : MonoBehaviour
         GameObject blood_position = transform.Find("KneeSplatter").gameObject;
         GameObject blood_instance = Instantiate(blood_effect, blood_position.transform.position, Quaternion.Euler(180, 0, 0), blood_position.transform);
         ParticleSystem ps = blood_instance.GetComponent<ParticleSystem>();
+        enemyScript.PlaySound(1);
         ps.Play();
         Destroy(blood_instance, ps.main.duration);
     }
@@ -33,7 +34,7 @@ public class UpperLeftLegScript : MonoBehaviour
                 if (!enemyScript.is_dead)
                 {
                     enemyScript.Mark_Dead();
-                    enemyScript.PlaySound();
+                    enemyScript.PlaySound(0);
                 }
                 int indx = Array.IndexOf(game_object_name, gameObject.name);                    
                 HingeJoint2D joint = GetComponent<HingeJoint2D>();

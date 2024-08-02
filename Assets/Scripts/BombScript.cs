@@ -36,7 +36,8 @@ public class BombScript : MonoBehaviour
                     EnemyScript es = obj.GetComponent<EnemyScript>();
                     if (!es.is_dead)
                     {
-                        es.PlaySound();
+                        es.PlaySound(0);
+                        es.PlaySound(1);
                         es.Mark_Dead();
                         es.Make_Bleed("r");
                         es.Make_Bleed("l");

@@ -23,7 +23,7 @@ public class HeadScript : MonoBehaviour
                     if (!enemyScript.is_dead)
                     {
                         enemyScript.Mark_Dead();
-                        enemyScript.PlaySound();
+                        enemyScript.PlaySound(0);
                     }
                     HingeJoint2D joint = gameObject.GetComponent<HingeJoint2D>();
                     if (joint != null && joint.enabled)

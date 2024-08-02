@@ -16,6 +16,7 @@ public class UpperRightArmScript : MonoBehaviour
         GameObject blood_position = transform.Find("ElbowSplatter").gameObject;
         GameObject blood_instance = Instantiate(blood_effect, blood_position.transform.position, Quaternion.Euler(180, 0, 0), blood_position.transform);
         ParticleSystem ps = blood_instance.GetComponent<ParticleSystem>();
+        enemyScript.PlaySound(1);
         ps.Play();
         Destroy(blood_instance, ps.main.duration);
     }
@@ -30,7 +31,7 @@ public class UpperRightArmScript : MonoBehaviour
                 if (!enemyScript.is_dead)
                 {
                     enemyScript.Mark_Dead();
-                    enemyScript.PlaySound();
+                    enemyScript.PlaySound(0);
                 }
                 enemyScript.splatter(1);
                 HingeJoint2D joint = GetComponent<HingeJoint2D>();
