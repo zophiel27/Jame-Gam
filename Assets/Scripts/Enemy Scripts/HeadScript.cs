@@ -21,13 +21,17 @@ public class HeadScript : MonoBehaviour
                 if (arrow_script.is_active)
                 {
                     if (!enemyScript.is_dead)
+                    {
                         enemyScript.Mark_Dead();
+                        enemyScript.PlaySound();
+                    }
                     HingeJoint2D joint = gameObject.GetComponent<HingeJoint2D>();
                     if (joint != null && joint.enabled)
                     {
                         joint.enabled = false;
                         EnemyScript parent_script = gameObject.GetComponentInParent<EnemyScript>();
                         parent_script.Decapitate();
+                        parent_script.splatter(0);
                     }
                 }
             }

@@ -14,16 +14,23 @@ public class LowerLeftArmScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Arrow") && enemyScript.last_collided_with_arrow != collision.gameObject)
         {
-            enemyScript.PlaySound();
             enemyScript.last_collided_with_arrow = collision.gameObject;
             ArrowScript arrow_script = collision.gameObject.GetComponent<ArrowScript>();
             if (arrow_script.is_active)
             {
                 if (!enemyScript.is_dead)
+                {
                     enemyScript.Mark_Dead();
+                    enemyScript.PlaySound();
+                }
                 HingeJoint2D joint = GetComponent<HingeJoint2D>();
-                joint.enabled = false;
-                Bleed();
+                if (joint.enabled)
+                {
+                    joint.enabled = false;
+                    Debug.Log("Joint enabled" + joint.enabled);
+                    Bleed();
+                    enemyScript.splatter(6);
+                }
             }
         }
     }

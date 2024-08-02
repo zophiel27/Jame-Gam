@@ -6,16 +6,26 @@ using System;
 public class UpperLeftLegScript : MonoBehaviour
 {
     EnemyScript enemyScript;
-    string[] game_object_name = { "LeftUpperLeg", "RightUpperLeg"};
+    string[] game_object_name = {"LeftUpperLeg", "RightUpperLeg"};
+    public GameObject blood_effect;
     private void Start()
     {
         enemyScript = transform.parent.GetComponent<EnemyScript>();
+    }
+    [ContextMenu("splatter")]
+    public void splatter()
+    {
+        GameObject blood_position = transform.Find("KneeSplatter").gameObject;
+        GameObject blood_instance = Instantiate(blood_effect, blood_position.transform.position, Quaternion.Euler(180, 0, 0), blood_position.transform);
+        ParticleSystem ps = blood_instance.GetComponent<ParticleSystem>();
+        ps.Play();
+        Destroy(blood_instance, ps.main.duration);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Arrow") && enemyScript.last_collided_with_arrow != collision.gameObject)
         {
-            enemyScript.PlaySound();
+            Debug.Log("Collided with " + gameObject.name);
             enemyScript.last_collided_with_arrow = collision.gameObject;
             ArrowScript arrow_script = collision.gameObject.GetComponent<ArrowScript>();
             if (arrow_script.is_active)
@@ -25,14 +35,26 @@ public class UpperLeftLegScript : MonoBehaviour
                     enemyScript.Mark_Dead();
                     enemyScript.PlaySound();
                 }
-                int indx = Array.IndexOf(game_object_name, gameObject.name);
-                if (indx != -1)
-                    enemyScript.splatter(indx + 3);
-                else { }
+                int indx = Array.IndexOf(game_object_name, gameObject.name);                    
                 HingeJoint2D joint = GetComponent<HingeJoint2D>();
-                joint.enabled = false;
+                if (joint.enabled) {
+                    joint.enabled = false;
+                    if (indx != -1)
+                        enemyScript.splatter(indx + 3);
+                    else {
+                        UpperLeftLegScript upper_leg_script = joint.connectedBody.gameObject.GetComponent<UpperLeftLegScript>();
+                        upper_leg_script.splatter();
+                    }
+
+                }
+                
                 EnemyScript parent_script = gameObject.GetComponentInParent<EnemyScript>();
+            }
+            else
+            {
+                Debug.Log("Arrow inactive");
             }
         }
     }
+    
 }

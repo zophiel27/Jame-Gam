@@ -413,9 +413,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 880363243889794389}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d24e8c554a8364343b03dd14ecb50e9d, type: 3}
+  m_Script: {fileID: 11500000, guid: 57ec4688515c4b64c81e7423edff0e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blood_effect: {fileID: 7467301924063554128, guid: 55a419c19be4d824da784fd8dbacd268, type: 3}
 --- !u!1 &884859061707265554
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,6 +676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ca4e98f30988b4ea927803d773319e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blood_effect: {fileID: 7467301924063554128, guid: 55a419c19be4d824da784fd8dbacd268, type: 3}
 --- !u!1 &1405156720156305186
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,6 +906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ec4688515c4b64c81e7423edff0e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blood_effect: {fileID: 7467301924063554128, guid: 55a419c19be4d824da784fd8dbacd268, type: 3}
 --- !u!1 &3495352080067551610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,6 +1296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ca4e98f30988b4ea927803d773319e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blood_effect: {fileID: 7467301924063554128, guid: 55a419c19be4d824da784fd8dbacd268, type: 3}
 --- !u!1 &4413210391077595931
 GameObject:
   m_ObjectHideFlags: 0
@@ -1698,6 +1702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ca4e98f30988b4ea927803d773319e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blood_effect: {fileID: 7467301924063554128, guid: 55a419c19be4d824da784fd8dbacd268, type: 3}
 --- !u!1 &5623935920411204393
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,7 +1759,7 @@ Transform:
   m_GameObject: {fileID: 5907668673946503633}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.38, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0.321, y: -0.51, z: 0}
   m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 0.19999999}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2187,6 +2192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ca4e98f30988b4ea927803d773319e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blood_effect: {fileID: 7467301924063554128, guid: 55a419c19be4d824da784fd8dbacd268, type: 3}
 --- !u!1 &7014756113560117311
 GameObject:
   m_ObjectHideFlags: 0
@@ -2212,7 +2218,7 @@ Transform:
   m_GameObject: {fileID: 7014756113560117311}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.39900002, y: -0.50900006, z: 0}
+  m_LocalPosition: {x: -0.433, y: -0.504, z: 0}
   m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 0.19999999}
   m_ConstrainProportionsScale: 0
   m_Children: []

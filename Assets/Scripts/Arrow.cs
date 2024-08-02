@@ -20,6 +20,7 @@ public class ArrowScript : MonoBehaviour
         startPosition = transform.position; // Store the original position
         rb = GetComponent<Rigidbody2D>();
         gameScript= FindObjectOfType<GameScript>();
+        is_active = true;
     }
 
     void OnCollisionEnter2D(Collision2D collision) // Zophiel alr had a function, dont have to use bren when u have Zophiel carrying u :3

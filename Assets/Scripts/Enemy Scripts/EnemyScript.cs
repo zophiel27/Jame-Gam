@@ -25,9 +25,18 @@ public class EnemyScript : MonoBehaviour
 
     public void splatter(int key)
     {
-        GameObject torso = transform.Find("Torso").gameObject;
-        TorsoScript torso_script = torso.GetComponent<TorsoScript>();
-        torso_script.splatter(key);
+        string[] game_object_name = { "RightUpperArm", "LeftUpperArm" };
+        if (key < 5)
+        {
+            GameObject torso = transform.Find("Torso").gameObject;
+            TorsoScript torso_script = torso.GetComponent<TorsoScript>();
+            torso_script.splatter(key);
+        }
+        else {
+            GameObject upper_arm = transform.Find(game_object_name[key - 5]).gameObject;
+            UpperRightArmScript upper_arm_script = upper_arm.GetComponent<UpperRightArmScript>();
+            upper_arm_script.splatter();
+        }
     }
 
     public void Make_Bleed(string side)
