@@ -1205,8 +1205,10 @@ MonoBehaviour:
   - {fileID: 4752517521246461041}
   Center: {fileID: 8294272273543889148}
   IdlePosition: {fileID: 5725583355646624203}
-  maxLength: 4
-  arrowSpeed: 80
+  power: 60
+  minPower: {x: -1, y: -1}
+  maxPower: {x: 1, y: 1}
+  maxPullDistance: 3
 --- !u!61 &4356769658574885396
 BoxCollider2D:
   m_ObjectHideFlags: 0
