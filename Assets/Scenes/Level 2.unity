@@ -242,6 +242,18 @@ PrefabInstance:
       propertyPath: m_text
       value: More levels in progress!
       objectReference: {fileID: 0}
+    - target: {fileID: 4772613310918923773, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 4772613310918923773, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 4772613310918923773, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4830875548152529065, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

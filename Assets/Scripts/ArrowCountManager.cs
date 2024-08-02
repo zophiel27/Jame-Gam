@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ArrowManager : MonoBehaviour
 {
-    public Text arrowText;
+    public TextMeshProUGUI arrowText;
     private int arrows;
 
     public void SetArrows(int arrowsNum){
