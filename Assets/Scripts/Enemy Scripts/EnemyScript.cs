@@ -16,13 +16,18 @@ public class EnemyScript : MonoBehaviour
         audio_source = GetComponent<AudioSource>();
     }
 
-    public void Decapitate(bool splatter_blood = true) {
+    public void Decapitate() 
+    {
         GameObject torso = transform.Find("Torso").gameObject;
         SpriteRenderer torso_sprite = torso.GetComponent<SpriteRenderer>();
-        TorsoScript s = torso.GetComponent<TorsoScript>();
         torso_sprite.sprite = bloody_torso;
-        if (splatter_blood)
-            s.splatter();
+    }
+
+    public void splatter(int key)
+    {
+        GameObject torso = transform.Find("Torso").gameObject;
+        TorsoScript torso_script = torso.GetComponent<TorsoScript>();
+        torso_script.splatter(key);
     }
 
     public void Make_Bleed(string side)
