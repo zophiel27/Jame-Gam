@@ -32,8 +32,11 @@ public class ArrowScript : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Wall"))
         {
-            //float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
-            //transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            // old method
+            // float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
+            // transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+            // new method
             // Get the normal of the surface we collided with
             Vector2 normal = collision.contacts[0].normal;
             Debug.Log("Normal: " + normal);
