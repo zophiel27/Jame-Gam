@@ -10,15 +10,23 @@ public class EnemyScript : MonoBehaviour
     public Sprite xx_head_sprite;
     public bool is_dead = false;
     public GameObject last_collided_with_arrow = null;
-    private AudioSource audio_source;
+    private AudioSource audioSource1;
+    private AudioSource audioSource2;
     public AudioClip[] audio_clips;
 
     private void Start()
     {
-        audio_source = GetComponent<AudioSource>();
-    }
+        AudioSource[] audio_source_list = GetComponents<AudioSource>();
+        if (audio_source_list.Length >= 2)
+        {
+            audioSource1 = audio_source_list[0];
+            audioSource2 = audio_source_list[1];
+            audioSource1.clip = audio_clips[0];
+            audioSource2.clip = audio_clips[1];
 
-    public void Decapitate() 
+        }
+    }
+        public void Decapitate() 
     {
         GameObject torso = transform.Find("Torso").gameObject;
         SpriteRenderer torso_sprite = torso.GetComponent<SpriteRenderer>();
@@ -67,7 +75,9 @@ public class EnemyScript : MonoBehaviour
 
     public void PlaySound(int indx) 
     {
-        audio_source.clip = audio_clips[indx];
-        audio_source.Play();
+        if (indx == 1)
+            audioSource2.Play();
+        else
+            audioSource1.Play();
     }
 }
