@@ -36,14 +36,15 @@ public class BombScript : MonoBehaviour
                     EnemyScript es = obj.GetComponent<EnemyScript>();
                     if (!es.is_dead)
                     {
+                        es.MakeJointsWeak();
                         es.PlaySound(0);
-                        es.PlaySound(1);
                         es.Mark_Dead();
                         es.Make_Bleed("r");
                         es.Make_Bleed("l");
                         es.Decapitate();
-                        es.splatter(0);
                     }
+                    es.splatter(0);
+                    es.PlaySound(1);
                 }
             }
         }

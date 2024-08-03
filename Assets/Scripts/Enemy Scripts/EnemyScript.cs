@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.U2D.IK;
 
 public class EnemyScript : MonoBehaviour
 {
@@ -79,5 +80,21 @@ public class EnemyScript : MonoBehaviour
             audioSource2.Play();
         else
             audioSource1.Play();
+    }
+
+    public void MakeJointsWeak()
+    {
+        string[] limbs = { "LeftUpperLeg", "RightUpperLeg", "LeftLowerLeg", "LeftLowerLeg" };
+        foreach (string limb in limbs) {
+            GameObject obj = transform.Find(limb).gameObject;
+            HingeJoint2D joint = obj.GetComponent<HingeJoint2D>();
+            JointAngleLimits2D limits = joint.limits;
+            limits.min = 0;
+            limits.max = 359;
+            joint.limits = limits;
+            joint.useLimits = true;
+
+        }
+
     }
 }

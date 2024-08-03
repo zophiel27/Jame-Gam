@@ -22,6 +22,7 @@ public class LowerLeftArmScript : MonoBehaviour
                 {
                     enemyScript.Mark_Dead();
                     enemyScript.PlaySound(0);
+                    enemyScript.MakeJointsWeak();
                 }
                 HingeJoint2D joint = GetComponent<HingeJoint2D>();
                 if (joint.enabled)

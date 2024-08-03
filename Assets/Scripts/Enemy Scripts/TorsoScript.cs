@@ -5,7 +5,8 @@ using UnityEngine;
 public class TorsoScript : MonoBehaviour
 {
 
-    EnemyScript enemyScript;
+    EnemyScript enemyScript; 
+    public float pushForce = 10f;
     private void Start()
     {
         enemyScript = transform.parent.GetComponent<EnemyScript>();
@@ -40,7 +41,12 @@ public class TorsoScript : MonoBehaviour
                 {
                     enemyScript.Mark_Dead();
                     enemyScript.PlaySound(0);
+                    enemyScript.MakeJointsWeak();
                 }
+                Rigidbody2D rb = GetComponent<Rigidbody2D>();
+                Vector2 pushDirection = collision.contacts[0].point - (Vector2)transform.position;
+                pushDirection = -pushDirection.normalized;
+                rb.AddForce(pushDirection * pushForce, ForceMode2D.Impulse);
                 if (collision.contacts.Length > 0)
                 {
                     ContactPoint2D contact = collision.contacts[0];

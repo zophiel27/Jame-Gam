@@ -6,6 +6,7 @@ public class UpperRightArmScript : MonoBehaviour
 {
     EnemyScript enemyScript;
     public GameObject blood_effect;
+    public float pushForce = 10f;
     private void Start()
     {
         enemyScript = transform.parent.GetComponent<EnemyScript>();
@@ -25,6 +26,7 @@ public class UpperRightArmScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Arrow") && enemyScript.last_collided_with_arrow != collision.gameObject)
         {
             enemyScript.last_collided_with_arrow = collision.gameObject;
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
             ArrowScript arrow_script = collision.gameObject.GetComponent<ArrowScript>();
             if (arrow_script.is_active)
             {
@@ -32,7 +34,11 @@ public class UpperRightArmScript : MonoBehaviour
                 {
                     enemyScript.Mark_Dead();
                     enemyScript.PlaySound(0);
+                    enemyScript.MakeJointsWeak();
                 }
+                Vector2 pushDirection = collision.contacts[0].point - (Vector2)transform.position;
+                pushDirection = -pushDirection.normalized;
+                rb.AddForce(pushDirection * pushForce, ForceMode2D.Impulse);
                 enemyScript.splatter(1);
                 HingeJoint2D joint = GetComponent<HingeJoint2D>();
                 joint.enabled = false;
