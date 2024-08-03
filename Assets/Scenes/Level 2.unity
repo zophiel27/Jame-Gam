@@ -243,9 +243,17 @@ PrefabInstance:
       value: More levels in progress!
       objectReference: {fileID: 0}
     - target: {fileID: 4772613310918923773, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
+      propertyPath: m_fontSize
+      value: 70.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772613310918923773, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 4772613310918923773, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 70.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4772613310918923773, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -401,6 +409,8 @@ MonoBehaviour:
   levelCompletedUI: {fileID: 1154879554}
   gameOverUI: {fileID: 1525476772}
   playerUI: {fileID: 0}
+  ArrowDecrement: {fileID: 0}
+  ScoreIncrement: {fileID: 0}
 --- !u!1 &1116189455
 GameObject:
   m_ObjectHideFlags: 0

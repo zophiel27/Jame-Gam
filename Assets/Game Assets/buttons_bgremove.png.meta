@@ -1,0 +1,580 @@
+fileFormatVersion: 2
+guid: 14cc8bef2a248cd43a686c2d812498c8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: buttons_bgremove_6
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 1692
+        width: 182
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: decdbacb15ca3694da2a586a8f4b5f61
+      internalID: -660818391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_bgremove_8
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1692
+        width: 184
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0220b9d5da817084ca70e4be7d28a17b
+      internalID: 763013270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_bgremove_17
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1508
+        width: 462
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6c25b4c650ecaa408e58420ae88c62f
+      internalID: 1333608925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_bgremove_19
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 1482
+        width: 182
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccf0ea3adb1bb4b47b36858d5dc297c5
+      internalID: -993975225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_bgremove_21
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 1482
+        width: 182
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a7f669b186a5a045990386734ad435d
+      internalID: 2011126199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_bgremove_23
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 1482
+        width: 182
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be0cc48c1028efc4198147f46591be9f
+      internalID: -1712465011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_bgremove_39
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1304
+        width: 462
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd50b6c67e45cb4b96175501380f9c0
+      internalID: -240513016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_bgremove_41
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 1272
+        width: 182
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d49a1d5027f9f84a9b8cc52a582d2af
+      internalID: 621502178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_bgremove_43
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 1272
+        width: 182
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84ab55657de902941a21df2db3cca0cb
+      internalID: 1645849617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_bgremove_44
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1272
+        width: 182
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 055788bcc4ac63144a9ef9435c2f6a71
+      internalID: 1502912173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_bgremove_60
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1106
+        width: 459
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c14d9439c7e174997aa8ecc2b1be7d
+      internalID: 1915434740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_bgremove_65
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 1062
+        width: 182
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ceb9eeff2cd56b4a8a165a7523b321b
+      internalID: 2020007578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_bgremove_74
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 902
+        width: 459
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e125ce31a317a6e47bcda2c7b6761a61
+      internalID: 1539770388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_bgremove_80
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 704
+        width: 460
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a25acd0b2885fb4db6b549c7960d71c
+      internalID: 113307557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_bgremove_85
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 506
+        width: 460
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5204a58564777a047abd47d8965f67e8
+      internalID: 1845043013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_bgremove_90
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 308
+        width: 459
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0602d96ee75546149a10fb82f3f87256
+      internalID: -874768036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_bgremove_0
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 1706
+        width: 455
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ddf83f428a3cc345aec892afed409ab
+      internalID: -1095349423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      buttons_bgremove_0: -1095349423
+      buttons_bgremove_1: 706359068
+      buttons_bgremove_10: -1786937561
+      buttons_bgremove_11: -1709442216
+      buttons_bgremove_12: -1073054896
+      buttons_bgremove_13: -1411122612
+      buttons_bgremove_14: 1821633753
+      buttons_bgremove_15: -1061989267
+      buttons_bgremove_16: -741803002
+      buttons_bgremove_17: 1333608925
+      buttons_bgremove_18: 815567602
+      buttons_bgremove_19: -993975225
+      buttons_bgremove_2: 1082628115
+      buttons_bgremove_20: 806483569
+      buttons_bgremove_21: 2011126199
+      buttons_bgremove_22: -1982979195
+      buttons_bgremove_23: -1712465011
+      buttons_bgremove_24: -806872901
+      buttons_bgremove_25: 1448681185
+      buttons_bgremove_26: 1156183911
+      buttons_bgremove_27: -1725320565
+      buttons_bgremove_28: 2142993019
+      buttons_bgremove_29: -1355741735
+      buttons_bgremove_3: -643154762
+      buttons_bgremove_30: 1579051347
+      buttons_bgremove_31: 909145699
+      buttons_bgremove_32: -2056995504
+      buttons_bgremove_33: -2075437175
+      buttons_bgremove_34: 1401781351
+      buttons_bgremove_35: 525094307
+      buttons_bgremove_36: 98045984
+      buttons_bgremove_37: -1729888456
+      buttons_bgremove_38: -394403883
+      buttons_bgremove_39: -240513016
+      buttons_bgremove_4: 119156548
+      buttons_bgremove_40: 733629007
+      buttons_bgremove_41: 621502178
+      buttons_bgremove_42: 389439072
+      buttons_bgremove_43: 1645849617
+      buttons_bgremove_44: 1502912173
+      buttons_bgremove_45: 281294603
+      buttons_bgremove_46: -293805890
+      buttons_bgremove_47: 521516596
+      buttons_bgremove_48: -40017828
+      buttons_bgremove_49: 1240718703
+      buttons_bgremove_5: -186950208
+      buttons_bgremove_50: 181468560
+      buttons_bgremove_51: 940720353
+      buttons_bgremove_52: 1180705674
+      buttons_bgremove_53: -891339957
+      buttons_bgremove_54: 710596019
+      buttons_bgremove_55: 1405705636
+      buttons_bgremove_56: -203391535
+      buttons_bgremove_57: -1528279191
+      buttons_bgremove_58: -1575942841
+      buttons_bgremove_59: -2009455416
+      buttons_bgremove_6: -660818391
+      buttons_bgremove_60: 1915434740
+      buttons_bgremove_61: -399921218
+      buttons_bgremove_62: -1672789062
+      buttons_bgremove_63: -175662338
+      buttons_bgremove_64: -771123347
+      buttons_bgremove_65: 2020007578
+      buttons_bgremove_66: -1888956815
+      buttons_bgremove_67: 473977803
+      buttons_bgremove_68: -839471419
+      buttons_bgremove_69: -460014816
+      buttons_bgremove_7: -413409551
+      buttons_bgremove_70: -1283000626
+      buttons_bgremove_71: -2122954605
+      buttons_bgremove_72: 468843016
+      buttons_bgremove_73: -213417537
+      buttons_bgremove_74: 1539770388
+      buttons_bgremove_75: 113142193
+      buttons_bgremove_76: -513349419
+      buttons_bgremove_77: -2100302326
+      buttons_bgremove_78: -277386145
+      buttons_bgremove_79: 1474311656
+      buttons_bgremove_8: 763013270
+      buttons_bgremove_80: 113307557
+      buttons_bgremove_81: -2144067583
+      buttons_bgremove_82: 1481771075
+      buttons_bgremove_83: -1670525530
+      buttons_bgremove_84: 1062395056
+      buttons_bgremove_85: 1845043013
+      buttons_bgremove_86: -554936013
+      buttons_bgremove_87: 381728324
+      buttons_bgremove_88: 1686291133
+      buttons_bgremove_89: -1030179910
+      buttons_bgremove_9: -1429109404
+      buttons_bgremove_90: -874768036
+      buttons_bgremove_91: -375062918
+      buttons_bgremove_92: -1707039488
+      buttons_bgremove_93: -1703871992
+      buttons_bgremove_94: 994131599
+      buttons_bgremove_95: -1648926120
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
