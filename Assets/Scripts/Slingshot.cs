@@ -12,11 +12,11 @@ public class Slingshot : MonoBehaviour
     bool isMouseDown;
     private Vector3 currentPosition;
     private bow Bow; //reference to the bow script
-    public float power = 2.0f;
+    public float power;
     public Vector2 minPower;
     public Vector2 maxPower;
     private Vector2 force;
-    public float maxPullDistance = 3.0f; // maximum distance the string can be pulled
+    public float maxPullDistance; // maximum distance the string can be pulled
 
     void Start()
     {

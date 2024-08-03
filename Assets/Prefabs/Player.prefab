@@ -1208,7 +1208,7 @@ MonoBehaviour:
   power: 60
   minPower: {x: -1, y: -1}
   maxPower: {x: 1, y: 1}
-  maxPullDistance: 3
+  maxPullDistance: 0.75
 --- !u!61 &4356769658574885396
 BoxCollider2D:
   m_ObjectHideFlags: 0
