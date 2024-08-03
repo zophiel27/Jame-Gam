@@ -12,6 +12,8 @@ public class GameScript : MonoBehaviour
     public GameObject levelCompletedUI;
     public GameObject gameOverUI;
     public GameObject playerUI;
+    public GameObject ArrowDecrement;
+    public GameObject ScoreIncrement;
     private bool levelcleared = false;
 
     void Start()
@@ -21,6 +23,7 @@ public class GameScript : MonoBehaviour
     public void ArrowFired()
     {
         arrows--;
+        setArrowDecrement();
         FindObjectOfType<ArrowManager>().SetArrows(arrows);
         if(arrows<=0){
             //After 5 seconds, Game Over UI will be shown
@@ -30,8 +33,8 @@ public class GameScript : MonoBehaviour
     }
     public void EnemyDied(){
         enemies--;
+        setScoreIncrement();
         FindObjectOfType<ScoreManager>().AddPoints();
-
         Debug.Log("Enemies left: "+enemies);
         if(enemies<=0){
             levelcleared = true;
@@ -69,6 +72,19 @@ public class GameScript : MonoBehaviour
             gameOverUI.SetActive(true);
             playerUI.SetActive(false);
         }
-        
+    }
+    private void setArrowDecrement(){
+        ArrowDecrement.SetActive(true);
+        Invoke(nameof(unsetArrowDecrement),1.5f);
+    }
+    private void unsetArrowDecrement(){
+        ArrowDecrement.SetActive(false);
+    }
+    private void setScoreIncrement(){
+        ScoreIncrement.SetActive(true);
+        Invoke(nameof(unsetScoreIncrement),1.5f);
+    }
+    private void unsetScoreIncrement(){
+        ScoreIncrement.SetActive(false);
     }
 }
