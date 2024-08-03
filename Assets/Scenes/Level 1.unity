@@ -940,6 +940,8 @@ MonoBehaviour:
   levelCompletedUI: {fileID: 793791043}
   gameOverUI: {fileID: 908617026}
   playerUI: {fileID: 1853901604}
+  ArrowDecrement: {fileID: 1228387680}
+  ScoreIncrement: {fileID: 596787491}
 --- !u!81 &1586681407
 AudioListener:
   m_ObjectHideFlags: 0
