@@ -22,7 +22,7 @@ public class bow : MonoBehaviour
     
     void Update()
     {
-        if(isMouseDown){
+        if(isMouseDown && arrowCount > 0){
             Vector2 pos=transform.position;
             Vector2 tapPos=Camera.main.ScreenToWorldPoint(Input.mousePosition);
             
@@ -82,6 +82,6 @@ public class bow : MonoBehaviour
     }
     public bool checkArrow()
     {
-        return another_arrow_exists;
+        return !another_arrow_exists && arrowCount > 0;
     }
 }
