@@ -11,6 +11,7 @@ public class GameScript : MonoBehaviour
     public int arrows;//Set Arrows Publically for Each Level
     public GameObject levelCompletedUI;
     public GameObject gameOverUI;
+    public GameObject restartAndBackUI;
     public GameObject playerUI;
     public GameObject ArrowDecrement;
     public GameObject ScoreIncrement;
@@ -63,6 +64,7 @@ public class GameScript : MonoBehaviour
         UnlockNextLevel();
         levelCompletedUI.SetActive(true);
         playerUI.SetActive(false);
+        restartAndBackUI.SetActive(false);
         //SceneManager.LoadScene(0);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1); For Next Level
     }
@@ -71,6 +73,7 @@ public class GameScript : MonoBehaviour
         {
             gameOverUI.SetActive(true);
             playerUI.SetActive(false);
+            restartAndBackUI.SetActive(false);
         }
     }
     private void setArrowDecrement(){
