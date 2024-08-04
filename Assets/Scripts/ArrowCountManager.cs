@@ -25,6 +25,6 @@ public class ArrowManager : MonoBehaviour
     {
         Debug.Log("PlayArrowAnimation called");
         arrowTextAnimator.SetTrigger("Pop");
-        arrowTextDecrementAnimator.SetTrigger("Decrement");
+        //arrowTextDecrementAnimator.SetTrigger("Decrement");
     }
 }
