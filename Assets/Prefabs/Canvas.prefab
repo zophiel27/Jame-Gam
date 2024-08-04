@@ -386,6 +386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 2627536066974833199}
+  scoreIncrementText: {fileID: 2793194638791446041}
 --- !u!114 &8246054485107379674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,6 +400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowText: {fileID: 8262624228381818956}
+  arrowDecrementText: {fileID: 2314003108308809493}
 --- !u!1 &856738507467040174
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,6 +680,7 @@ GameObject:
   - component: {fileID: 1275199892433806199}
   - component: {fileID: 8608811975885352789}
   - component: {fileID: 8262624228381818956}
+  - component: {fileID: 1435636977124046961}
   m_Layer: 5
   m_Name: ArrowText (TMP)
   m_TagString: Untagged
@@ -801,6 +804,27 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!95 &1435636977124046961
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2399587170439156919}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 78aa525bb1ac13f469a5b05db808b413, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2552681486453874980
 GameObject:
   m_ObjectHideFlags: 0
@@ -1347,6 +1371,7 @@ GameObject:
   - component: {fileID: 4579897413038671189}
   - component: {fileID: 6762171070658648982}
   - component: {fileID: 2793194638791446041}
+  - component: {fileID: 3018829221979918620}
   m_Layer: 5
   m_Name: Score Increment
   m_TagString: Untagged
@@ -1370,7 +1395,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 70, y: -22}
+  m_AnchoredPosition: {x: 86.9, y: -25.400028}
   m_SizeDelta: {x: 32, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6762171070658648982
@@ -1410,7 +1435,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280407091
+    rgba: 4280197419
   m_fontColor: {r: 0.16814592, g: 0.6320754, b: 0.11627804, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1464,12 +1489,33 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -6.139084, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!95 &3018829221979918620
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3692030962855090845}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 78aa525bb1ac13f469a5b05db808b413, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4045544842699559429
 GameObject:
   m_ObjectHideFlags: 0
@@ -2209,6 +2255,7 @@ GameObject:
   - component: {fileID: 4636112752614584527}
   - component: {fileID: 6336392375950358922}
   - component: {fileID: 2314003108308809493}
+  - component: {fileID: 4376124591963393719}
   m_Layer: 5
   m_Name: Arrow Decrement
   m_TagString: Untagged
@@ -2232,7 +2279,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 70, y: 22}
+  m_AnchoredPosition: {x: 86.9, y: 18.6}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6336392375950358922
@@ -2272,8 +2319,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280169689
-  m_fontColor: {r: 0.8490566, g: 0.2052989, b: 0.11614456, a: 1}
+    rgba: 4278190280
+  m_fontColor: {r: 0.78431374, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2332,6 +2379,27 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!95 &4376124591963393719
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7696760469474063617}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 78aa525bb1ac13f469a5b05db808b413, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8021257868549314992
 GameObject:
   m_ObjectHideFlags: 0
@@ -2343,6 +2411,7 @@ GameObject:
   - component: {fileID: 4343402031834585923}
   - component: {fileID: 6835965838530675972}
   - component: {fileID: 2627536066974833199}
+  - component: {fileID: 8486212329240136228}
   m_Layer: 5
   m_Name: 'ScoreText (TMP) '
   m_TagString: Untagged
@@ -2466,6 +2535,27 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!95 &8486212329240136228
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8021257868549314992}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 78aa525bb1ac13f469a5b05db808b413, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8553849810501555777
 GameObject:
   m_ObjectHideFlags: 0
@@ -2502,7 +2592,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 99, y: -53.503}
+  m_AnchoredPosition: {x: 91.1, y: -53.503}
   m_SizeDelta: {x: 118, y: 73.007}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8755374981952835465

@@ -24,7 +24,8 @@ public class GameScript : MonoBehaviour
     public void ArrowFired()
     {
         arrows--;
-        setArrowDecrement();
+        //setArrowDecrement();
+        FindObjectOfType<ArrowManager>().PlayArrowAnimation();
         FindObjectOfType<ArrowManager>().SetArrows(arrows);
         if(arrows<=0){
             //After 5 seconds, Game Over UI will be shown
@@ -35,6 +36,7 @@ public class GameScript : MonoBehaviour
     public void EnemyDied(){
         enemies--;
         setScoreIncrement();
+        FindObjectOfType<ScoreManager>().PlayScoreAnimation();
         FindObjectOfType<ScoreManager>().AddPoints();
         Debug.Log("Enemies left: "+enemies);
         if(enemies<=0){

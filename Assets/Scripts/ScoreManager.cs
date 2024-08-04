@@ -5,11 +5,16 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI scoreIncrementText;
     private int score;// = 0;
+    private Animator scoreTextAnimator;
+    private Animator scoreTextIncrementAnimator;
 
     void Start()
     {
         score = 0;
+        scoreTextAnimator = scoreText.GetComponent<Animator>();
+        scoreTextIncrementAnimator = scoreIncrementText.GetComponent<Animator>();
     }
     void Update()
     {
@@ -20,5 +25,11 @@ public class ScoreManager : MonoBehaviour
     }
     public int GetPoints(){
         return score;
+    }
+    public void PlayScoreAnimation()
+    {
+        Debug.Log("ScoreAnimation called");
+        scoreTextAnimator.SetTrigger("scorePop");
+        scoreTextIncrementAnimator.SetTrigger("Increment");
     }
 }
