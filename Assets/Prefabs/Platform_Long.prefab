@@ -148,6 +148,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3593580796284197284}
     m_Modifications:
+    - target: {fileID: 1574873586245073837, guid: d471befb41027c44daef31606b1d0213, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574873586245073837, guid: d471befb41027c44daef31606b1d0213, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574873586245073837, guid: d471befb41027c44daef31606b1d0213, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1807606877
+      objectReference: {fileID: 0}
     - target: {fileID: 3619590359284627460, guid: d471befb41027c44daef31606b1d0213, type: 3}
       propertyPath: m_Name
       value: Platform_New (2)
@@ -216,6 +228,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3593580796284197284}
     m_Modifications:
+    - target: {fileID: 1574873586245073837, guid: d471befb41027c44daef31606b1d0213, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574873586245073837, guid: d471befb41027c44daef31606b1d0213, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574873586245073837, guid: d471befb41027c44daef31606b1d0213, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1807606877
+      objectReference: {fileID: 0}
     - target: {fileID: 3619590359284627460, guid: d471befb41027c44daef31606b1d0213, type: 3}
       propertyPath: m_Name
       value: Platform_New (1)
@@ -284,6 +308,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3593580796284197284}
     m_Modifications:
+    - target: {fileID: 1574873586245073837, guid: d471befb41027c44daef31606b1d0213, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574873586245073837, guid: d471befb41027c44daef31606b1d0213, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574873586245073837, guid: d471befb41027c44daef31606b1d0213, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1807606877
+      objectReference: {fileID: 0}
     - target: {fileID: 3619590359284627460, guid: d471befb41027c44daef31606b1d0213, type: 3}
       propertyPath: m_Name
       value: Platform_New
