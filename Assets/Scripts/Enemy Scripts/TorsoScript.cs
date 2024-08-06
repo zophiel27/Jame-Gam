@@ -60,5 +60,9 @@ public class TorsoScript : MonoBehaviour
                 }
             }
         }
+        else if (collision.gameObject.CompareTag("Boulder"))
+        {
+            enemyScript.Crush();
+        }
     }
 }

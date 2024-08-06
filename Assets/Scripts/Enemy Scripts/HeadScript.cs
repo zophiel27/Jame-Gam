@@ -37,5 +37,9 @@ public class HeadScript : MonoBehaviour
                 }
             }
         }
+        else if (collision.gameObject.CompareTag("Boulder"))
+        {
+            enemyScript.Crush();
+        }
     }
 }

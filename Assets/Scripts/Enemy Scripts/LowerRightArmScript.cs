@@ -33,6 +33,10 @@ public class LowerRightArmScript : MonoBehaviour
                 }
             }
         }
+        else if (collision.gameObject.CompareTag("Boulder"))
+        {
+            enemyScript.Crush();
+        }
     }
     public void Bleed()
     {
