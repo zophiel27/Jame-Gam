@@ -10,6 +10,8 @@ TagManager:
   - Arrow
   - Bomb
   - Enemy
+  - Ball
+  - Chain
   layers:
   - Default
   - TransparentFX

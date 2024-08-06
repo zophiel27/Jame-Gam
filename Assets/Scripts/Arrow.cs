@@ -6,6 +6,7 @@ public class ArrowScript : MonoBehaviour
     private Rigidbody2D rb;
     private GameScript gameScript;
     public bool is_active = true;
+    public float fallThreshold = 0f; // defining a threshold for fallen chains
     void Update()
     {
         if (rb.velocity != Vector2.zero)
@@ -48,21 +49,23 @@ public class ArrowScript : MonoBehaviour
             // Assign the reflected velocity to the Rigidbody
             rb.velocity = reflectedVelocity;
         }
-        //else if (collision.gameObject.CompareTag("Enemy"))
-        //{
-        //    FindObjectOfType<bow>().ResetArrowInAir(); // Reset the flag in PlayerController
-        //    rb.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
-        //    gameScript.EnemyDied();
-        //}
-    }
-
-    void OnTriggerEnter2D(Collider2D collider) // Uncomment if u still need this code
-    {
-        if (collider.CompareTag("Enemy"))
+        else if (collision.gameObject.CompareTag("Chain"))
         {
-            //FindObjectOfType<bow>().ResetArrowInAir();
-            //rb.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
-            //gameScript.EnemyDied();
+            Debug.Log("Chain hit");
+            HingeJoint2D hinge = collision.gameObject.GetComponent<HingeJoint2D>();
+            if (hinge != null)
+            {
+                Destroy(hinge);
+                
+                //get parent object of the chain
+                GameObject chainParent = collision.gameObject.transform.parent.gameObject;
+                Destroy(collision.gameObject, 1f);
+                //set chainParent incative after 2 seconds
+                Destroy(chainParent, 2f);
+
+            }
+            
         }
     }
+
 }
