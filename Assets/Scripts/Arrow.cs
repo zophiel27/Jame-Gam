@@ -56,11 +56,9 @@ public class ArrowScript : MonoBehaviour
             if (hinge != null)
             {
                 Destroy(hinge);
-                
-                //get parent object of the chain
+        
                 GameObject chainParent = collision.gameObject.transform.parent.gameObject;
                 Destroy(collision.gameObject, 1f);
-                //set chainParent incative after 2 seconds
                 Destroy(chainParent, 2f);
 
             }
