@@ -1,0 +1,580 @@
+fileFormatVersion: 2
+guid: 516241d5d9467b94ebcd3e2b183d3f84
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: buttons_colored_6
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 1692
+        width: 182
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09164c8538b326843940e82464f9b60d
+      internalID: 2141668114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_colored_8
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1692
+        width: 184
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47df0240c5a8d6d4c8b5c661a8d69651
+      internalID: 74667342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_colored_17
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1508
+        width: 456
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a90f74c6a8b5d6a4d9caf92a099e596b
+      internalID: 248262065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_colored_19
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 1482
+        width: 182
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e74c5f8ffae9664b8bd24ddbd496820
+      internalID: -1263719527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_colored_21
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 1482
+        width: 182
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b070092627a4b3438e164e5c10aeba0
+      internalID: -1648501868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_colored_23
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 1482
+        width: 182
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd25aeb941752ad4fb2691f5357c7dfa
+      internalID: 119195949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_colored_39
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1304
+        width: 457
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 933dde4b8080bd545bae4bea8e15b1d4
+      internalID: 1213753444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_colored_41
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 1272
+        width: 182
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51951306a77b01c468ebd0b790ae67d0
+      internalID: -130065572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_colored_43
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 1272
+        width: 182
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0997b7a8c725f94439d3602088df37d2
+      internalID: 1017962475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_colored_44
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1272
+        width: 182
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf53d608adc300a4eb20e5fe9957653c
+      internalID: -1089485814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_colored_60
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1107
+        width: 456
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb917b175ca60f143931cde0660ce30d
+      internalID: -1090514846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_colored_65
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 1062
+        width: 182
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776f82b16bb90e4459603deb46fe7647
+      internalID: 1495879928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_colored_74
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 902
+        width: 457
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23689636b57a61e4aba242d28ea6f9d0
+      internalID: -561455597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_colored_80
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 704
+        width: 456
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5c514aeadc91941b58714acaef309b
+      internalID: -1091719483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_colored_85
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 506
+        width: 457
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a31545f40d66845866c98e9993182c
+      internalID: -377276337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_colored_90
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 308
+        width: 460
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4753171c02866649a9aafe4ab0961e3
+      internalID: 1394782680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_colored_0
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1705
+        width: 457
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e65b30c34970346830d71522d8a85b
+      internalID: 375029898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      buttons_colored_0: 375029898
+      buttons_colored_1: 435591772
+      buttons_colored_10: 764202799
+      buttons_colored_11: -2134804555
+      buttons_colored_12: 832917912
+      buttons_colored_13: 1894353052
+      buttons_colored_14: -606437423
+      buttons_colored_15: -830062491
+      buttons_colored_16: -1641297950
+      buttons_colored_17: 248262065
+      buttons_colored_18: 328331794
+      buttons_colored_19: -1263719527
+      buttons_colored_2: -1616430997
+      buttons_colored_20: 1276246676
+      buttons_colored_21: -1648501868
+      buttons_colored_22: -29405147
+      buttons_colored_23: 119195949
+      buttons_colored_24: -724010244
+      buttons_colored_25: -265145966
+      buttons_colored_26: 1603368076
+      buttons_colored_27: 334093842
+      buttons_colored_28: 82193776
+      buttons_colored_29: -1037515284
+      buttons_colored_3: -1832249058
+      buttons_colored_30: 834982187
+      buttons_colored_31: -233698984
+      buttons_colored_32: 1874302949
+      buttons_colored_33: -1521566176
+      buttons_colored_34: 2107533649
+      buttons_colored_35: 803339744
+      buttons_colored_36: 1520675218
+      buttons_colored_37: -1124017257
+      buttons_colored_38: 1651068421
+      buttons_colored_39: 1213753444
+      buttons_colored_4: -1354922729
+      buttons_colored_40: 1567679839
+      buttons_colored_41: -130065572
+      buttons_colored_42: 1473116899
+      buttons_colored_43: 1017962475
+      buttons_colored_44: -1089485814
+      buttons_colored_45: 319091031
+      buttons_colored_46: 1791096473
+      buttons_colored_47: -1510719939
+      buttons_colored_48: -458523442
+      buttons_colored_49: 1180303242
+      buttons_colored_5: 1858136341
+      buttons_colored_50: -1572678970
+      buttons_colored_51: 424244595
+      buttons_colored_52: -1152473500
+      buttons_colored_53: 2050996380
+      buttons_colored_54: -1429697194
+      buttons_colored_55: 1390266506
+      buttons_colored_56: 1274779623
+      buttons_colored_57: 1686389017
+      buttons_colored_58: 375457732
+      buttons_colored_59: -530273749
+      buttons_colored_6: 2141668114
+      buttons_colored_60: -1090514846
+      buttons_colored_61: -195246100
+      buttons_colored_62: 558053026
+      buttons_colored_63: 497581738
+      buttons_colored_64: -960306308
+      buttons_colored_65: 1495879928
+      buttons_colored_66: 349637540
+      buttons_colored_67: -847228329
+      buttons_colored_68: -1128658533
+      buttons_colored_69: 1989771729
+      buttons_colored_7: -1649757864
+      buttons_colored_70: -432248576
+      buttons_colored_71: 420371912
+      buttons_colored_72: -56991151
+      buttons_colored_73: -1239515390
+      buttons_colored_74: -561455597
+      buttons_colored_75: 1529185712
+      buttons_colored_76: 296195770
+      buttons_colored_77: -1416236950
+      buttons_colored_78: -1421632624
+      buttons_colored_79: -557667743
+      buttons_colored_8: 74667342
+      buttons_colored_80: -1091719483
+      buttons_colored_81: -1860253660
+      buttons_colored_82: -154201901
+      buttons_colored_83: 38529396
+      buttons_colored_84: -1274527882
+      buttons_colored_85: -377276337
+      buttons_colored_86: 40969965
+      buttons_colored_87: 467030970
+      buttons_colored_88: 1305666190
+      buttons_colored_89: 358793808
+      buttons_colored_9: 1911372092
+      buttons_colored_90: 1394782680
+      buttons_colored_91: -1468405505
+      buttons_colored_92: -60211436
+      buttons_colored_93: -2077586273
+      buttons_colored_94: -1481477039
+      buttons_colored_95: 1728093956
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
