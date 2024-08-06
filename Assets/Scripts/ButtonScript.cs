@@ -13,11 +13,14 @@ public class ButtonScript : MonoBehaviour
     public char axis = 'x';
     public GameObject[] mechanisms;
     float deactivation_time = 11f;
+    int multiplier = 1;
 
     private void Start()
     {
         button_sprite = GetComponent<SpriteRenderer>();
         button_sprite.sprite = button_not_activated_sprite;
+        if ((button_sprite.flipX && !button_sprite.flipY) || (button_sprite.flipX && !button_sprite.flipY))
+            multiplier = -1;
     }
 
     public void Update()
@@ -41,17 +44,17 @@ public class ButtonScript : MonoBehaviour
             button_sprite.sprite = button_not_activated_sprite;
             button_sprite.transform.localScale = new Vector3(-button_sprite.transform.localScale.x, button_sprite.transform.localScale.y, button_sprite.transform.localScale.z);
             if (axis == 'x')
-                vec.x -= offset;
+                vec.x -= offset * multiplier;
             else
-                vec.y -= offset;
+                vec.y -= offset * multiplier;
             button_sprite.transform.localPosition = vec;
         }
         else
         {
             if (axis == 'x')
-                vec.x += offset;
+                vec.x += offset * multiplier;
             else
-                vec.y += offset;
+                vec.y += offset * multiplier;
             is_activated = true;
             button_sprite.sprite = button_activated_sprite;
             button_sprite.transform.localScale = new Vector3(-button_sprite.transform.localScale.x, button_sprite.transform.localScale.y, button_sprite.transform.localScale.z);

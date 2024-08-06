@@ -14,6 +14,7 @@ public class EnemyScript : MonoBehaviour
     private AudioSource audioSource1;
     private AudioSource audioSource2;
     public AudioClip[] audio_clips;
+    bool crushed = false;
 
     private void Start()
     {
@@ -27,7 +28,7 @@ public class EnemyScript : MonoBehaviour
 
         }
     }
-        public void Decapitate() 
+    public void Decapitate()
     {
         GameObject torso = transform.Find("Torso").gameObject;
         SpriteRenderer torso_sprite = torso.GetComponent<SpriteRenderer>();
@@ -43,7 +44,8 @@ public class EnemyScript : MonoBehaviour
             TorsoScript torso_script = torso.GetComponent<TorsoScript>();
             torso_script.splatter(key);
         }
-        else {
+        else
+        {
             GameObject upper_arm = transform.Find(game_object_name[key - 5]).gameObject;
             UpperRightArmScript upper_arm_script = upper_arm.GetComponent<UpperRightArmScript>();
             upper_arm_script.splatter();
@@ -66,7 +68,8 @@ public class EnemyScript : MonoBehaviour
         }
     }
 
-    public void Mark_Dead() {
+    public void Mark_Dead()
+    {
         FindObjectOfType<GameScript>().EnemyDied();
         GameObject head = transform.Find("Head").gameObject;
         SpriteRenderer head_sprite = head.GetComponent<SpriteRenderer>();
@@ -74,7 +77,7 @@ public class EnemyScript : MonoBehaviour
         is_dead = true;
     }
 
-    public void PlaySound(int indx) 
+    public void PlaySound(int indx)
     {
         if (indx == 1)
             audioSource2.Play();
@@ -85,7 +88,8 @@ public class EnemyScript : MonoBehaviour
     public void MakeJointsWeak()
     {
         string[] limbs = { "LeftUpperLeg", "RightUpperLeg", "LeftLowerLeg", "LeftLowerLeg" };
-        foreach (string limb in limbs) {
+        foreach (string limb in limbs)
+        {
             GameObject obj = transform.Find(limb).gameObject;
             HingeJoint2D joint = obj.GetComponent<HingeJoint2D>();
             JointAngleLimits2D limits = joint.limits;
@@ -96,5 +100,20 @@ public class EnemyScript : MonoBehaviour
 
         }
 
+    }
+
+    public void Crush() {
+        if (!crushed)
+        {
+            crushed = true;
+            MakeJointsWeak();
+            PlaySound(0);
+            Mark_Dead();
+            Make_Bleed("r");
+            Make_Bleed("l");
+            Decapitate();
+            splatter(0);
+            PlaySound(1);
+        }
     }
 }

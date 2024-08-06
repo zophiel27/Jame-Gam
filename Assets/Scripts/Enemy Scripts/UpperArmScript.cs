@@ -49,5 +49,9 @@ public class UpperRightArmScript : MonoBehaviour
                     parent_script.Make_Bleed("l");
             }
         }
+        else if (collision.gameObject.CompareTag("Boulder"))
+        {
+            enemyScript.Crush();
+        }
     }
 }

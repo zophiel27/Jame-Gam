@@ -16,7 +16,7 @@ public class UpperLeftLegScript : MonoBehaviour
     [ContextMenu("splatter")]
     public void splatter()
     {
-        GameObject blood_position = transform.Find("KneeSplatter").gameObject;
+        GameObject blood_position = transform.Find("KneenemyScriptplatter").gameObject;
         GameObject blood_instance = Instantiate(blood_effect, blood_position.transform.position, Quaternion.Euler(180, 0, 0), blood_position.transform);
         ParticleSystem ps = blood_instance.GetComponent<ParticleSystem>();
         enemyScript.PlaySound(1);
@@ -41,26 +41,29 @@ public class UpperLeftLegScript : MonoBehaviour
                 Vector2 pushDirection = collision.contacts[0].point - (Vector2)transform.position;
                 pushDirection = -pushDirection.normalized;
                 rb.AddForce(pushDirection * pushForce, ForceMode2D.Impulse);
-                int indx = Array.IndexOf(game_object_name, gameObject.name);                    
+                int indx = Array.IndexOf(game_object_name, gameObject.name);
                 HingeJoint2D joint = GetComponent<HingeJoint2D>();
-                if (joint.enabled) {
+                if (joint.enabled)
+                {
                     joint.enabled = false;
                     if (indx != -1)
                         enemyScript.splatter(indx + 3);
-                    else {
+                    else
+                    {
                         UpperLeftLegScript upper_leg_script = joint.connectedBody.gameObject.GetComponent<UpperLeftLegScript>();
                         upper_leg_script.splatter();
                     }
 
                 }
-                
-                EnemyScript parent_script = gameObject.GetComponentInParent<EnemyScript>();
             }
             else
             {
                 Debug.Log("Arrow inactive");
             }
         }
+        else if (collision.gameObject.CompareTag("Boulder"))
+        {
+            enemyScript.Crush();
+        }
     }
-    
 }

@@ -34,6 +34,10 @@ public class LowerLeftArmScript : MonoBehaviour
                 }
             }
         }
+        else if (collision.gameObject.CompareTag("Boulder"))
+        {
+            enemyScript.Crush();
+        }
     }
     public void Bleed() { 
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
