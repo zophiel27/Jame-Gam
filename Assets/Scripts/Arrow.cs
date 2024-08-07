@@ -32,7 +32,7 @@ public class ArrowScript : MonoBehaviour
             rb.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
             is_active = false;
         }
-        else if (collision.gameObject.CompareTag("Wall"))
+        else if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Boulder"))
         {
             // old method
             // float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
@@ -52,6 +52,7 @@ public class ArrowScript : MonoBehaviour
         else if (collision.gameObject.CompareTag("Chain"))
         {
             Debug.Log("Chain hit");
+            Destroy(gameObject);
             HingeJoint2D hinge = collision.gameObject.GetComponent<HingeJoint2D>();
             if (hinge != null)
             {
@@ -59,7 +60,7 @@ public class ArrowScript : MonoBehaviour
         
                 GameObject chainParent = collision.gameObject.transform.parent.gameObject;
                 Destroy(collision.gameObject, 1f);
-                Destroy(chainParent, 2f);
+                Destroy(chainParent, 1f);
 
             }
             

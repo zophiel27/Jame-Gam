@@ -103,7 +103,7 @@ public class EnemyScript : MonoBehaviour
     }
 
     public void Crush() {
-        if (!crushed)
+        if (!crushed && !is_dead)
         {
             crushed = true;
             MakeJointsWeak();

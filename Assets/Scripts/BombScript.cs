@@ -56,7 +56,7 @@ public class BombScript : MonoBehaviour
     //ON collision with arrow 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Arrow"))
+        if (collision.gameObject.CompareTag("Arrow") || collision.gameObject.CompareTag("Boulder"))
             Explode();
     }
     private void OnDrawGizmosSelected()
