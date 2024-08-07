@@ -27,7 +27,7 @@ public class MoveableDoorScript : MonoBehaviour
         if (!is_active)
         {
             is_active = true;
-            move_offset = door.transform.localPosition.y >= 1 ? -0.2f : 0.2f;
+            move_offset = door.transform.localPosition.y >= 1 ? -0.4f : 0.4f;
         } 
     }
 }
