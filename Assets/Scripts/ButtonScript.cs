@@ -12,7 +12,7 @@ public class ButtonScript : MonoBehaviour
     float offset = 0.04f;
     public char axis = 'x';
     public GameObject[] mechanisms;
-    float deactivation_time = 11f;
+    float deactivation_time = 13f;
     int multiplier = 1;
 
     private void Start()
