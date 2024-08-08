@@ -35,7 +35,7 @@ public class ArrowScript : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Boulder"))
         {
-            if (bounceCount >= 5)
+            if (bounceCount >= 7)
             {
                 stopArrow();
                 bounceCount = 0;
