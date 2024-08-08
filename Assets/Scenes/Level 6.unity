@@ -943,6 +943,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1586681406}
+    - target: {fileID: 8553849810501555777, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1140,7 +1144,7 @@ MonoBehaviour:
     Malik (Game Dev/Game Sfx/Game Design)
 
     Abdul Rafay Chohan (Game Dev/Game
-    Design/Testing)'
+    Design/ Game Testing)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb2d4d9567d1fe44fb87365007b7a4e5, type: 2}
   m_sharedMaterial: {fileID: -2363950131310009377, guid: cb2d4d9567d1fe44fb87365007b7a4e5, type: 2}
