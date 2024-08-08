@@ -24,7 +24,6 @@ public class MoveableDoorScript : MonoBehaviour
             } 
         }
     }
-    [ContextMenu("Activate Door")]
     public void Activate() {
         if (!is_active)
         {
