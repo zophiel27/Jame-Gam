@@ -79,6 +79,7 @@ public class bow : MonoBehaviour
     public void ResetArrowInAir()
     {
         arrowInAir = false; // Reset the flag when called
+        another_arrow_exists=false;
     }
     public bool checkArrow()
     {

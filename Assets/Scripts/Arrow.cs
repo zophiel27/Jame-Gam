@@ -52,13 +52,15 @@ public class ArrowScript : MonoBehaviour
         else if (collision.gameObject.CompareTag("Chain"))
         {
             Debug.Log("Chain hit");
+            GameObject chainParent = collision.gameObject.transform.parent.gameObject;
+            ChainScript chainScript = chainParent.GetComponent<ChainScript>();
+            chainScript.PlaySound();
             Destroy(gameObject);
+            FindObjectOfType<bow>().ResetArrowInAir(); // Reset the flag in PlayerController
             HingeJoint2D hinge = collision.gameObject.GetComponent<HingeJoint2D>();
             if (hinge != null)
             {
                 Destroy(hinge);
-        
-                GameObject chainParent = collision.gameObject.transform.parent.gameObject;
                 Destroy(collision.gameObject, 1f);
                 Destroy(chainParent, 1f);
 
@@ -71,5 +73,9 @@ private void stopArrow(){
     FindObjectOfType<bow>().ResetArrowInAir(); // Reset the flag in PlayerController
     rb.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
     is_active = false;
+    Invoke("DestroyArrow", 1f);
+}
+private void DestroyArrow(){
+    Destroy(gameObject);
 }
 }

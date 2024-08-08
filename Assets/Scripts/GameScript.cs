@@ -16,6 +16,7 @@ public class GameScript : MonoBehaviour
     public GameObject ArrowDecrement;
     public GameObject ScoreIncrement;
     private bool levelcleared = false;
+    public AudioSource audioSource;
 
     void Start()
     {
@@ -54,12 +55,24 @@ public class GameScript : MonoBehaviour
         }
     }
     public void Back(){
+        PlaySound();
+        Invoke(nameof(BackLevel), 0.2f);
+    }
+    public void BackLevel(){
         SceneManager.LoadScene(0);
     }
     public void Restart(){
+        PlaySound();
+        Invoke(nameof(RestartLevel), 0.2f);
+    }
+    public void RestartLevel(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void NextLevel(){
+        PlaySound();
+        Invoke(nameof(Next), 0.2f);
+    }
+    public void Next(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
     private void LevelCompleted(){
@@ -91,5 +104,8 @@ public class GameScript : MonoBehaviour
     }
     private void unsetScoreIncrement(){
         ScoreIncrement.SetActive(false);
+    }
+    public void PlaySound(){
+        audioSource.Play();
     }
 }

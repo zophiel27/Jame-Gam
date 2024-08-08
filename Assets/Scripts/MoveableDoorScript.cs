@@ -8,8 +8,10 @@ public class MoveableDoorScript : MonoBehaviour
     float move_offset = 0;
     bool is_active = false;
     GameObject door;
+    private AudioSource audioSource;
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         door = transform.Find("Door").gameObject;
     }
     void Update()
@@ -26,8 +28,13 @@ public class MoveableDoorScript : MonoBehaviour
     public void Activate() {
         if (!is_active)
         {
+            PlaySound();
             is_active = true;
             move_offset = door.transform.localPosition.y >= 1 ? -0.4f : 0.4f;
         } 
     }
+    private void PlaySound()
+    {
+        audioSource.Play();
+    }   
 }

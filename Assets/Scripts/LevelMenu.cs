@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class LevelMenu : MonoBehaviour
 {
     public Button[] buttons;
-
+    private int level;
     private void Awake()
     {
         int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel",1);
@@ -26,8 +26,8 @@ public class LevelMenu : MonoBehaviour
 
     public void OpenLevel(int levelId)
     {
-        string levelName = "Level " + levelId;
-        SceneManager.LoadScene(levelName);
+        level=levelId;
+        Invoke(nameof(StartLevel), 0.2f);
     }
      [ContextMenu("Reset Progress")]
     public void ResetProgress()
@@ -35,5 +35,10 @@ public class LevelMenu : MonoBehaviour
         PlayerPrefs.SetInt("UnlockedLevel", 1);
         PlayerPrefs.Save();
         Awake();
+    }
+    private void StartLevel()
+    {
+        string levelName = "Level " + level;
+        SceneManager.LoadScene(levelName);
     }
 }
