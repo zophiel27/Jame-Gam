@@ -24,7 +24,6 @@ public class bow : MonoBehaviour
         if(isMouseDown && arrowCount > 0){
             Vector2 pos=transform.position;
             Vector2 tapPos=Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            
             Vector2 mouseOffset = new Vector2(0, 0);
             tapPos += mouseOffset;
             Vector2 direction= pos-tapPos;

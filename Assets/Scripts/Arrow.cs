@@ -38,6 +38,7 @@ public class ArrowScript : MonoBehaviour
             if (bounceCount >= 7)
             {
                 stopArrow();
+                DestroyArrow();
                 bounceCount = 0;
             }
             else
@@ -71,7 +72,6 @@ public class ArrowScript : MonoBehaviour
         FindObjectOfType<bow>().ResetArrowInAir(); // Reset the flag in PlayerController
         rb.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
         is_active = false;
-        DestroyArrow();
     }
     private void DestroyArrow()
     {

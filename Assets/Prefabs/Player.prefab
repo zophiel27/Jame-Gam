@@ -961,7 +961,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 0
 --- !u!1 &6815156278927370627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,7 +1205,7 @@ MonoBehaviour:
   - {fileID: 4752517521246461041}
   Center: {fileID: 8294272273543889148}
   IdlePosition: {fileID: 5725583355646624203}
-  power: 30
+  power: 60
   minPower: {x: -1, y: -1}
   maxPower: {x: 1, y: 1}
   maxPullDistance: 0.6

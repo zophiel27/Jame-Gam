@@ -17,10 +17,18 @@ public class GameScript : MonoBehaviour
     public GameObject ScoreIncrement;
     private bool levelcleared = false;
     public AudioSource audioSource;
+    private AudioSource[] allAudioSources;
 
     void Start()
     {
+        allAudioSources = FindObjectsOfType<AudioSource>();
+        bool isMuted = PlayerPrefs.GetInt("AllSoundsMuted", 0) == 1;
+        foreach (AudioSource audioSource in allAudioSources)
+        {
+            audioSource.mute = isMuted;
+        }
         FindObjectOfType<ArrowManager>().SetArrows(arrows);
+        FindObjectOfType<ScoreManager>().SetHighScoreText("Level"+SceneManager.GetActiveScene().buildIndex);
     }
     public void ArrowFired()
     {
@@ -42,6 +50,7 @@ public class GameScript : MonoBehaviour
         if(enemies<=0){
             FindObjectOfType<ScoreManager>().AddBonus(arrows);
             levelcleared = true;
+            FindObjectOfType<ScoreManager>().CheckAndSetHighScore("Level"+SceneManager.GetActiveScene().buildIndex);
             //After 2 seconds, Level Completed UI will be shown
             Invoke(nameof(LevelCompleted), 2f);
         }

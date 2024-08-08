@@ -28,13 +28,6 @@ public class LevelMenu : MonoBehaviour
         level=levelId;
         Invoke(nameof(StartLevel), 0.2f);
     }
-     [ContextMenu("Reset Progress")]
-    public void ResetProgress()
-    {
-        PlayerPrefs.SetInt("UnlockedLevel", 1);
-        PlayerPrefs.Save();
-        Awake();
-    }
     private void StartLevel()
     {
         string levelName = "Level " + level;
