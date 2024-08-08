@@ -9,7 +9,6 @@ public class ChainScript : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
     }
-
     public void PlaySound()
     {
         audioSource.Play();

@@ -17,7 +17,6 @@ public class ArrowScript : MonoBehaviour
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
     }
-
     void Start()
     {
         FindObjectOfType<bow>().ResetArrowInAir(); // Reset the flag in PlayerController
@@ -28,7 +27,6 @@ public class ArrowScript : MonoBehaviour
         is_active = true;
         Invoke("DestroyArrow",3.5f);
     }
-
     void OnCollisionEnter2D(Collision2D collision) // Zophiel alr had a function, dont have to use bren when u have Zophiel carrying u :3
     {
         if (collision.gameObject.CompareTag("Floor")) // Assuming the floor has a tag "Floor"
@@ -66,7 +64,6 @@ public class ArrowScript : MonoBehaviour
                 Destroy(collision.gameObject, 1f);
                 Destroy(chainParent, 1f);
             }
-            
         }
     }
 private void stopArrow(){
@@ -79,5 +76,4 @@ private void stopArrow(){
 private void DestroyArrow(){
     Destroy(gameObject);
 }
-
 }

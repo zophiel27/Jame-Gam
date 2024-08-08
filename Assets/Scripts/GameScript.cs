@@ -32,7 +32,6 @@ public class GameScript : MonoBehaviour
             //After 5 seconds, Game Over UI will be shown
             Invoke(nameof(GameOver), 4.5f);
         }
-
     }
     public void EnemyDied(){
         enemies--;
@@ -85,7 +84,7 @@ public class GameScript : MonoBehaviour
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1); For Next Level
     }
     private void GameOver(){
-        if( !levelcleared)
+        if(!levelcleared)
         {
             gameOverUI.SetActive(true);
             playerUI.SetActive(false);

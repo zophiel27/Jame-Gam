@@ -22,7 +22,6 @@ public class ButtonScript : MonoBehaviour
         if ((button_sprite.flipX && !button_sprite.flipY) || (button_sprite.flipX && !button_sprite.flipY))
             multiplier = -1;
     }
-
     public void Update()
     {
         if (is_activated) { 
@@ -34,7 +33,6 @@ public class ButtonScript : MonoBehaviour
             }
         }
     }
-
     [ContextMenu("Change Sprite")]
     void ChangeSpirte() {
         Vector3 vec = new Vector3(button_sprite.transform.localPosition.x, button_sprite.transform.localPosition.y, button_sprite.transform.localPosition.z);
@@ -61,7 +59,6 @@ public class ButtonScript : MonoBehaviour
             button_sprite.transform.localPosition = vec;
         }
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!is_activated)

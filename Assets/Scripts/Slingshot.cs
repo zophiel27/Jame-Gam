@@ -24,14 +24,12 @@ public class Slingshot : MonoBehaviour
     public int numberOfTrajectoryPoints = 10;
     public float pointSpacing = 0.03f;
     public Transform shootingPoint;
-
     void Start()
     {
         LineRenderers[0].positionCount = 2; 
         LineRenderers[1].positionCount = 2;
         UpdateStringPositions();  
-        bow = FindObjectOfType<bow>(); // Finding the script
-
+        bow = FindObjectOfType<bow>(); // Finding the script in the scene
         // Initialize the trajectory points
         trajectoryPoints = new GameObject[numberOfTrajectoryPoints];
         for (int i = 0; i < numberOfTrajectoryPoints; i++)
@@ -40,7 +38,6 @@ public class Slingshot : MonoBehaviour
             trajectoryPoints[i].SetActive(false); // Initially hide trajectory points
         }
     }
-    
     void Update()
     {
         UpdateStringPositions();
@@ -48,18 +45,14 @@ public class Slingshot : MonoBehaviour
         {
             Vector3 mousePos = Input.mousePosition;
             mousePos.z = 10;
-
             currentPosition = Camera.main.ScreenToWorldPoint(mousePos);
             currentPosition = ClampToMaxDistance(currentPosition);
-
             SetStrings(currentPosition);
-
             // Calculate the force
             force = new Vector2(
                 Mathf.Clamp(Center.position.x - currentPosition.x, minPower.x, maxPower.x),
                 Mathf.Clamp(Center.position.y - currentPosition.y, minPower.y, maxPower.y)
             );
-
             // Update the trajectory points
             UpdateTrajectoryPoints(shootingPoint.position, force * power);
         }
@@ -69,7 +62,6 @@ public class Slingshot : MonoBehaviour
             HideTrajectoryPoints();
         }
     }
-
     private void OnMouseDown()
     {
         isMouseDown = true;
@@ -90,19 +82,16 @@ public class Slingshot : MonoBehaviour
             HideTrajectoryPoints();
         }
     }
-
     void ResetStrings()
     {
         currentPosition = IdlePosition.position;
         SetStrings(currentPosition);
     }
-
     void SetStrings(Vector3 position)
     {
         LineRenderers[0].SetPosition(1, position);
         LineRenderers[1].SetPosition(1, position);
     }
-
     void UpdateStringPositions()
     {
         LineRenderers[0].SetPosition(0, stringPositions[0].position);
@@ -110,7 +99,6 @@ public class Slingshot : MonoBehaviour
         LineRenderers[0].SetPosition(1, Center.position);
         LineRenderers[1].SetPosition(1, Center.position);
     }
-
     Vector3 ClampToMaxDistance(Vector3 position)
     {
         Vector3 direction = position - Center.position;
@@ -120,18 +108,16 @@ public class Slingshot : MonoBehaviour
         }
         return Center.position + direction;
     }
-
     void UpdateTrajectoryPoints(Vector2 startPosition, Vector2 velocity)
     {
         for (int i = 0; i < numberOfTrajectoryPoints; i++)
         {
             float t = i * pointSpacing;
-            Vector2 pointPosition = startPosition + velocity * t + 0.5f * Physics2D.gravity * (t * t);
+            Vector2 pointPosition = startPosition + velocity * t;
             trajectoryPoints[i].transform.position = pointPosition;
             trajectoryPoints[i].SetActive(true); // Show the trajectory points
         }
     }
-
     void HideTrajectoryPoints()
     {
         foreach (GameObject point in trajectoryPoints)

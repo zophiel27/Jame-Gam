@@ -19,11 +19,8 @@ public class BombScript : MonoBehaviour
         if (virtualCamera != null)
             shake_script = virtualCamera.GetComponent<CameraShake>();
     }
-
-    [ContextMenu("Explode Bomb")] // will be invoked later by another event but for now run manually in editor
     public void Explode() {
         Collider2D[] objects_hit = Physics2D.OverlapCircleAll(transform.position, aoe);
-
         foreach (Collider2D obj in objects_hit) {
             Vector2 direction_of_force = obj.transform.position - transform.position; // get the direction in which force should be exerted
             Rigidbody2D obj_rigid_body = obj.GetComponent<Rigidbody2D>();

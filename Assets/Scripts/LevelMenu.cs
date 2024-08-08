@@ -23,7 +23,6 @@ public class LevelMenu : MonoBehaviour
             buttons[i].interactable = true;
         }
     }
-
     public void OpenLevel(int levelId)
     {
         level=levelId;

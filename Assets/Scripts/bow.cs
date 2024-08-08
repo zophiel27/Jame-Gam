@@ -19,7 +19,6 @@ public class bow : MonoBehaviour
         gameScript = FindObjectOfType<GameScript>();
         arrowCount = gameScript.arrows;
     }
-    
     void Update()
     {
         if(isMouseDown && arrowCount > 0){
@@ -32,12 +31,10 @@ public class bow : MonoBehaviour
             transform.right=direction;
         }
     }
-    
     public void SetMouseDown(bool isDown)
     {
         isMouseDown = isDown;
     }
-
     public void ShootArrow(Vector3 force)
     {
         if (shootingPoint && !another_arrow_exists && !arrowInAir && arrowCount > 0) 
@@ -60,7 +57,6 @@ public class bow : MonoBehaviour
         {
             Debug.Log("No arrows left");
         }
-        
     }
     public void ResetArrowInAir()
     {
