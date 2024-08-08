@@ -31,19 +31,6 @@ public class bow : MonoBehaviour
             Vector2 direction= pos-tapPos;
             transform.right=direction;
         }
-        
-
-        if (another_arrow_exists)
-            {
-                if (timer > 0)
-                    timer -= Time.deltaTime;
-                if (timer <= 0)
-                   { 
-                    another_arrow_exists = false;
-                    Destroy(NewArrow);
-                    arrowInAir = false;
-                    }
-            }
     }
     
     public void SetMouseDown(bool isDown)
@@ -55,7 +42,6 @@ public class bow : MonoBehaviour
     {
         if (shootingPoint && !another_arrow_exists && !arrowInAir && arrowCount > 0) 
         {
-            timer=3.5f;
             arrowCount--;
             FindObjectOfType<GameScript>().ArrowFired();
             arrowInAir = true;

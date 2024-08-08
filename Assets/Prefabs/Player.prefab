@@ -1205,10 +1205,15 @@ MonoBehaviour:
   - {fileID: 4752517521246461041}
   Center: {fileID: 8294272273543889148}
   IdlePosition: {fileID: 5725583355646624203}
-  power: 60
+  power: 30
   minPower: {x: -1, y: -1}
   maxPower: {x: 1, y: 1}
   maxPullDistance: 0.6
+  pointPrefab: {fileID: 7701342642814763900, guid: 429f964c5aa1fe847b031880be37ceef, type: 3}
+  trajectoryPoints: []
+  numberOfTrajectoryPoints: 10
+  pointSpacing: 0.03
+  shootingPoint: {fileID: 7108266511832939209}
 --- !u!61 &4356769658574885396
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -41,6 +41,7 @@ public class GameScript : MonoBehaviour
         FindObjectOfType<ScoreManager>().AddPoints();
         Debug.Log("Enemies left: "+enemies);
         if(enemies<=0){
+            FindObjectOfType<ScoreManager>().AddBonus(arrows);
             levelcleared = true;
             //After 2 seconds, Level Completed UI will be shown
             Invoke(nameof(LevelCompleted), 2f);

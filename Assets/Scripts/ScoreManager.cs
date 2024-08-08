@@ -23,6 +23,9 @@ public class ScoreManager : MonoBehaviour
     public void AddPoints(){
         score += 10;
     }
+    public void AddBonus(int bonus){
+        score += 10*bonus;
+    }
     public int GetPoints(){
         return score;
     }

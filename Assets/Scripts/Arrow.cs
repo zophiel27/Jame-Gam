@@ -20,11 +20,13 @@ public class ArrowScript : MonoBehaviour
 
     void Start()
     {
+        FindObjectOfType<bow>().ResetArrowInAir(); // Reset the flag in PlayerController
         startPosition = transform.position; // Store the original position
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * speed;
         gameScript= FindObjectOfType<GameScript>();
         is_active = true;
+        Invoke("DestroyArrow",3.5f);
     }
 
     void OnCollisionEnter2D(Collision2D collision) // Zophiel alr had a function, dont have to use bren when u have Zophiel carrying u :3
@@ -63,7 +65,6 @@ public class ArrowScript : MonoBehaviour
                 Destroy(hinge);
                 Destroy(collision.gameObject, 1f);
                 Destroy(chainParent, 1f);
-
             }
             
         }
@@ -73,9 +74,10 @@ private void stopArrow(){
     FindObjectOfType<bow>().ResetArrowInAir(); // Reset the flag in PlayerController
     rb.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
     is_active = false;
-    Invoke("DestroyArrow", 1f);
+    DestroyArrow();
 }
 private void DestroyArrow(){
     Destroy(gameObject);
 }
+
 }
