@@ -43,7 +43,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2149398652935506421}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 82a268b7687e25e49bbba369c2536083, type: 2}
+  m_Material: {fileID: 6200000, guid: 2420cab11a1361c469ac2a715951d2e8, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -87,7 +87,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2149398652935506421}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
