@@ -6,6 +6,8 @@ public class ArrowScript : MonoBehaviour
     private Rigidbody2D rb;
     private GameScript gameScript;
     public bool is_active = true;
+    private int bounceCount = 0;
+    public float speed = 25f;
     public float fallThreshold = 0f; // defining a threshold for fallen chains
     void Update()
     {
@@ -20,6 +22,7 @@ public class ArrowScript : MonoBehaviour
     {
         startPosition = transform.position; // Store the original position
         rb = GetComponent<Rigidbody2D>();
+        rb.velocity = transform.right * speed;
         gameScript= FindObjectOfType<GameScript>();
         is_active = true;
     }
@@ -28,26 +31,23 @@ public class ArrowScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Floor")) // Assuming the floor has a tag "Floor"
         {
-            FindObjectOfType<bow>().ResetArrowInAir(); // Reset the flag in PlayerController
-            rb.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
-            is_active = false;
+            stopArrow();
         }
         else if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Boulder"))
         {
-            // old method
-            // float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
-            // transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
-            // new method
-            // Get the normal of the surface we collided with
-            Vector2 normal = collision.contacts[0].normal;
-            Debug.Log("Normal: " + normal);
-            // Reflect the velocity vector off the surface normal
-            Vector2 incomingVelocity = rb.velocity;
-            Vector2 reflectedVelocity = Vector2.Reflect(incomingVelocity, normal);
-
-            // Assign the reflected velocity to the Rigidbody
-            rb.velocity = reflectedVelocity;
+            if (bounceCount >= 5)
+            {
+                stopArrow();
+                bounceCount = 0;
+            }
+            else
+            {
+                Vector2 normal = collision.contacts[0].normal;
+                Debug.Log("Normal: " + normal);
+                Vector2 reflectDir = Vector2.Reflect(rb.velocity, normal);
+                rb.velocity = reflectDir;
+                bounceCount++;
+            }    
         }
         else if (collision.gameObject.CompareTag("Chain"))
         {
@@ -66,5 +66,10 @@ public class ArrowScript : MonoBehaviour
             
         }
     }
-
+private void stopArrow(){
+    
+    FindObjectOfType<bow>().ResetArrowInAir(); // Reset the flag in PlayerController
+    rb.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
+    is_active = false;
+}
 }
