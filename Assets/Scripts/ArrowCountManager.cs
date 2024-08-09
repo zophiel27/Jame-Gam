@@ -21,6 +21,7 @@ public class ArrowManager : MonoBehaviour
     public void SetArrows(int arrowsNum){
         arrows = arrowsNum;
     }
+    [ContextMenu("PlayArrowAnimation")]
     public void PlayArrowAnimation()
     {
         Debug.Log("PlayArrowAnimation called");

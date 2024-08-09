@@ -15,6 +15,7 @@ public class GameScript : MonoBehaviour
     public GameObject playerUI;
     public GameObject ArrowDecrement;
     public GameObject ScoreIncrement;
+    public GameObject BonusIncrement;
     private bool levelcleared = false;
     public AudioSource audioSource;
     private AudioSource[] allAudioSources;
@@ -48,7 +49,13 @@ public class GameScript : MonoBehaviour
         FindObjectOfType<ScoreManager>().AddPoints();
         Debug.Log("Enemies left: "+enemies);
         if(enemies<=0){
+            
             FindObjectOfType<ScoreManager>().AddBonus(arrows);
+            if(arrows>0)
+            {
+                setBonusIncrement();
+                FindObjectOfType<ScoreManager>().PlayBonusAnimation();
+            }
             levelcleared = true;
             FindObjectOfType<ScoreManager>().CheckAndSetHighScore("Level"+SceneManager.GetActiveScene().buildIndex);
             //After 2 seconds, Level Completed UI will be shown
@@ -113,6 +120,13 @@ public class GameScript : MonoBehaviour
     }
     private void unsetScoreIncrement(){
         ScoreIncrement.SetActive(false);
+    }
+    private void setBonusIncrement(){
+        BonusIncrement.SetActive(true);
+        Invoke(nameof(unsetBonusIncrement),1.5f);
+    }
+    private void unsetBonusIncrement(){
+        BonusIncrement.SetActive(false);
     }
     public void PlaySound(){
         audioSource.Play();

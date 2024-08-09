@@ -7,10 +7,12 @@ public class ScoreManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI HighscoreText;
+    public TextMeshProUGUI BonusText;
     public TextMeshProUGUI scoreIncrementText;
     private int score;// = 0;
     private Animator scoreTextAnimator;
     private Animator scoreTextIncrementAnimator;
+    private Animator scoreTextBonusAnimator;
     private Dictionary<string, int> levelHighScores = new Dictionary<string, int>();
 
     void Start()
@@ -18,6 +20,7 @@ public class ScoreManager : MonoBehaviour
         score = 0;
         scoreTextAnimator = scoreText.GetComponent<Animator>();
         scoreTextIncrementAnimator = scoreIncrementText.GetComponent<Animator>();
+        scoreTextBonusAnimator = BonusText.GetComponent<Animator>();
         LoadHighScores();
     }
     
@@ -89,15 +92,23 @@ public class ScoreManager : MonoBehaviour
         score += 10;
     }
     public void AddBonus(int bonus){
-        score += 10*bonus;
+        int bonusPoints = 10*bonus;
+        score += bonusPoints;
+        BonusText.text = "+" + bonusPoints.ToString();
     }
     public int GetPoints(){
         return score;
     }
+    [ContextMenu("PlayScoreAnimation")]
     public void PlayScoreAnimation()
     {
         Debug.Log("ScoreAnimation called");
         scoreTextAnimator.SetTrigger("scorePop");
         scoreTextIncrementAnimator.SetTrigger("Increment");
+    }
+    [ContextMenu("PlayBonusAnimation")]
+    public void PlayBonusAnimation()
+    {
+        scoreTextBonusAnimator.SetTrigger("BonusIncrement");
     }
 }

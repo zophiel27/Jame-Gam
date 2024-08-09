@@ -268,6 +268,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 480a8a34e4232b9438eef5f180c7f673, type: 3}
+--- !u!1 &452064679 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3759114429343711387, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
+  m_PrefabInstance: {fileID: 1516979374}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &548715235 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5041720425120103933, guid: 696168d03790b9348b96069344b8a1b7, type: 3}
@@ -898,29 +903,9 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1586681406}
-    - target: {fileID: 2314003108308809493, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
-      propertyPath: m_fontSize
-      value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 2314003108308809493, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 2627536066974833199, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
-      propertyPath: m_fontSize
-      value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 2627536066974833199, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 2793194638791446041, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
-      propertyPath: m_fontSize
-      value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 2793194638791446041, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 28
+    - target: {fileID: 3759114429343711387, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4028532932568158332, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -930,22 +915,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1586681406}
-    - target: {fileID: 5084473297081236974, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 5084473297081236974, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 140
-      objectReference: {fileID: 0}
-    - target: {fileID: 5084473297081236974, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 108
-      objectReference: {fileID: 0}
-    - target: {fileID: 5084473297081236974, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -78
-      objectReference: {fileID: 0}
     - target: {fileID: 5278269061784473743, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -958,21 +927,9 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1586681406}
-    - target: {fileID: 8262624228381818956, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
-      propertyPath: m_fontSize
-      value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 8262624228381818956, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 8262624228381818956, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
-      propertyPath: m_fontColorGradient.topLeft.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8262624228381818956, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
-      propertyPath: m_fontColorGradient.topLeft.g
-      value: 0
+    - target: {fileID: 8775532595060563252, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278232285
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1023,6 +980,7 @@ MonoBehaviour:
   playerUI: {fileID: 1853901604}
   ArrowDecrement: {fileID: 864834424}
   ScoreIncrement: {fileID: 868368282}
+  BonusIncrement: {fileID: 452064679}
   audioSource: {fileID: 2132664356}
 --- !u!81 &1586681407
 AudioListener:
