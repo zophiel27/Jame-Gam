@@ -762,6 +762,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 3756020584799142853, guid: 696168d03790b9348b96069344b8a1b7, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5041720425120103933, guid: 696168d03790b9348b96069344b8a1b7, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1
