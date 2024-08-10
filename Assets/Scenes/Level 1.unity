@@ -122,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &133893721 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8553849810501555777, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
+  m_PrefabInstance: {fileID: 1516979374}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &144056810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -324,6 +329,11 @@ Rigidbody2D:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7108266511832939209, guid: e2f6c548ee8808948b73b17fd43470de, type: 3}
   m_PrefabInstance: {fileID: 144056810}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &697351042 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8872923001951395520, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
+  m_PrefabInstance: {fileID: 1516979374}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &714568153
 GameObject:
@@ -802,6 +812,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 696168d03790b9348b96069344b8a1b7, type: 3}
+--- !u!114 &1260866974 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5495885140880306107, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
+  m_PrefabInstance: {fileID: 1516979374}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1425554738 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5041720425120103933, guid: 696168d03790b9348b96069344b8a1b7, type: 3}
@@ -903,10 +924,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1586681406}
-    - target: {fileID: 3759114429343711387, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4028532932568158332, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -927,10 +944,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1586681406}
-    - target: {fileID: 8775532595060563252, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4278232285
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -941,6 +954,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6799373673586444244, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
   m_PrefabInstance: {fileID: 1516979374}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1576926191 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1762075716670084540, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
+  m_PrefabInstance: {fileID: 1516979374}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1586681405
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,9 +1002,13 @@ MonoBehaviour:
   gameOverUI: {fileID: 626733697}
   restartAndBackUI: {fileID: 1516979375}
   playerUI: {fileID: 1853901604}
+  ArrowAndScoreUI: {fileID: 133893721}
   ArrowDecrement: {fileID: 864834424}
   ScoreIncrement: {fileID: 868368282}
   BonusIncrement: {fileID: 452064679}
+  NewHighScoreUI: {fileID: 697351042}
+  scoreText: {fileID: 1260866974}
+  HighscoreText: {fileID: 1576926191}
   audioSource: {fileID: 2132664356}
 --- !u!81 &1586681407
 AudioListener:
