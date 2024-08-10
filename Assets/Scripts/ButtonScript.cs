@@ -69,7 +69,6 @@ public class ButtonScript : MonoBehaviour
                 foreach (MonoBehaviour script in scripts)
                 {
                     System.Type scriptType = script.GetType();
-                    Debug.Log("Script type is" + scriptType);
                     MethodInfo activateMethod = scriptType.GetMethod("Activate", BindingFlags.Instance | BindingFlags.Public);
                     activateMethod.Invoke(script, null);
                 }
