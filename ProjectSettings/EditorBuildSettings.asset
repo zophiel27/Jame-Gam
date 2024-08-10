@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 6.unity
     guid: d945800607d48714a963b1d0ee103383
+  - enabled: 1
+    path: Assets/Scenes/Level 7.unity
+    guid: 07077c156eadcaa4aa6676c62448a221
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 132c925d7179a2f4db928d3eb3eb17cb, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 44c2c850ff861944292936751d3d7f68, type: 2}
