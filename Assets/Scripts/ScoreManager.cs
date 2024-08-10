@@ -13,6 +13,8 @@ public class ScoreManager : MonoBehaviour
     private Animator scoreTextAnimator;
     private Animator scoreTextIncrementAnimator;
     private Animator scoreTextBonusAnimator;
+    private bool newHighScore = false;
+    
     void Start()
     {
         score = 0;
@@ -31,6 +33,7 @@ public class ScoreManager : MonoBehaviour
         {
             PlayerPrefs.SetInt(levelName, currentScore);
             PlayerPrefs.Save();
+            newHighScore = true;
         }
     }
 
@@ -44,6 +47,10 @@ public class ScoreManager : MonoBehaviour
     public void SetHighScoreText(string levelName)
     {
         HighscoreText.text = "High Score: " + GetHighScore(levelName).ToString();
+    }
+    public bool checkNewHighScore()
+    {
+        return newHighScore;
     }
     void Update()
     {

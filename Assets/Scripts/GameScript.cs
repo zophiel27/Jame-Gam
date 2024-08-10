@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameScript : MonoBehaviour
 {
@@ -13,9 +14,13 @@ public class GameScript : MonoBehaviour
     public GameObject gameOverUI;
     public GameObject restartAndBackUI;
     public GameObject playerUI;
+    public GameObject ArrowAndScoreUI;
     public GameObject ArrowDecrement;
     public GameObject ScoreIncrement;
     public GameObject BonusIncrement;
+    public GameObject NewHighScoreUI;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI HighscoreText;
     private bool levelcleared = false;
     public AudioSource audioSource;
     private AudioSource[] allAudioSources;
@@ -94,6 +99,13 @@ public class GameScript : MonoBehaviour
     }
     private void LevelCompleted(){
         UnlockNextLevel();
+        ArrowAndScoreUI.SetActive(false);
+        HighscoreText.text = "Highscore: " + FindObjectOfType<ScoreManager>().GetHighScore("Level"+SceneManager.GetActiveScene().buildIndex).ToString();
+        scoreText.text = "Score: " + FindObjectOfType<ScoreManager>().GetPoints().ToString();
+        if(FindObjectOfType<ScoreManager>().checkNewHighScore())
+        {
+            NewHighScoreUI.SetActive(true);
+        }
         levelCompletedUI.SetActive(true);
         playerUI.SetActive(false);
         restartAndBackUI.SetActive(false);
@@ -105,6 +117,7 @@ public class GameScript : MonoBehaviour
         {
             gameOverUI.SetActive(true);
             playerUI.SetActive(false);
+            ArrowAndScoreUI.SetActive(false);
             restartAndBackUI.SetActive(false);
         }
     }
