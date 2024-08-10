@@ -27,6 +27,7 @@ public class GameScript : MonoBehaviour
         foreach (AudioSource audioSource in allAudioSources)
         {
             audioSource.mute = isMuted;
+            print("Audio Source: " + audioSource);
         }
         FindObjectOfType<ArrowManager>().SetArrows(arrows);
         FindObjectOfType<ScoreManager>().SetHighScoreText("Level"+SceneManager.GetActiveScene().buildIndex);
@@ -63,7 +64,7 @@ public class GameScript : MonoBehaviour
         }
     }
     public void UnlockNextLevel(){
-        if(SceneManager.GetActiveScene().buildIndex>=PlayerPrefs.GetInt("UnlockedLevel"))
+        if(SceneManager.GetActiveScene().buildIndex>=PlayerPrefs.GetInt("UnlockedLevel") && SceneManager.GetActiveScene().buildIndex!=6)
         {
             PlayerPrefs.SetInt("UnlockedLevel", SceneManager.GetActiveScene().buildIndex+1);
             PlayerPrefs.Save();

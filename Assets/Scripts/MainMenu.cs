@@ -20,10 +20,9 @@ public class MainMenu : MonoBehaviour
         bool isMuted = PlayerPrefs.GetInt("MenuMusicMuted", 0) == 1;
         menuMusicSource.mute = isMuted;
         musicToggleImage.sprite = isMuted ? musicOffSprite : musicOnSprite;
-
-        bool isMuted2 = PlayerPrefs.GetInt("AllSoundsMuted", 0) == 1;
-        audioSource.mute = isMuted2;
-        sfxToggleImage.sprite = isMuted2 ? sfxOffSprite : sfxOnSprite;
+        isMuted = PlayerPrefs.GetInt("AllSoundsMuted", 0) == 1;
+        audioSource.mute = isMuted;
+        sfxToggleImage.sprite = isMuted ? sfxOffSprite : sfxOnSprite;
     }
     public void QuitGame()
     {
@@ -39,6 +38,10 @@ public class MainMenu : MonoBehaviour
         // Clear all PlayerPrefs data
         PlayerPrefs.DeleteAll();
         PlayerPrefs.Save();
+        menuMusicSource.mute = false;
+        musicToggleImage.sprite =  musicOnSprite;
+        audioSource.mute = false;
+        sfxToggleImage.sprite =  sfxOnSprite;
     }
     public void ToggleMenuMusic(bool isMuted)
     {
