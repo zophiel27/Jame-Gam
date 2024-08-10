@@ -237,7 +237,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 477949958, guid: 26e913eddd1ed394db59fda962ef41c6, type: 3}
+  m_Sprite: {fileID: -611734146, guid: 1802521423d017e41ab4daaaf34ef554, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -370,7 +370,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1657776585, guid: 26e913eddd1ed394db59fda962ef41c6, type: 3}
+  m_Sprite: {fileID: -569761022, guid: 1802521423d017e41ab4daaaf34ef554, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1167,7 +1167,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1301718469, guid: 26e913eddd1ed394db59fda962ef41c6, type: 3}
+  m_Sprite: {fileID: -670758243, guid: 1802521423d017e41ab4daaaf34ef554, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4354,6 +4354,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 525448512}
   menuMusicSource: {fileID: 1316888229}
+  musicToggleImage: {fileID: 743719566}
+  sfxToggleImage: {fileID: 345794509}
+  musicOnSprite: {fileID: -670758243, guid: 1802521423d017e41ab4daaaf34ef554, type: 3}
+  musicOffSprite: {fileID: -1757599079, guid: 1802521423d017e41ab4daaaf34ef554, type: 3}
+  sfxOnSprite: {fileID: -569761022, guid: 1802521423d017e41ab4daaaf34ef554, type: 3}
+  sfxOffSprite: {fileID: -451514782, guid: 1802521423d017e41ab4daaaf34ef554, type: 3}
 --- !u!1 &1732319971
 GameObject:
   m_ObjectHideFlags: 0

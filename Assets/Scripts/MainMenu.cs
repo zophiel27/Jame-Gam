@@ -2,18 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
     public AudioSource audioSource;
     public AudioSource menuMusicSource;
+    public Image musicToggleImage;
+    public Image sfxToggleImage;
+    public Sprite musicOnSprite;
+    public Sprite musicOffSprite;
+    public Sprite sfxOnSprite;
+    public Sprite sfxOffSprite;
     void Start()
     {
         // Load the saved state of menu music
         bool isMuted = PlayerPrefs.GetInt("MenuMusicMuted", 0) == 1;
         menuMusicSource.mute = isMuted;
+        musicToggleImage.sprite = isMuted ? musicOffSprite : musicOnSprite;
+
         bool isMuted2 = PlayerPrefs.GetInt("AllSoundsMuted", 0) == 1;
         audioSource.mute = isMuted2;
+        sfxToggleImage.sprite = isMuted2 ? sfxOffSprite : sfxOnSprite;
     }
     public void QuitGame()
     {
@@ -37,6 +47,8 @@ public class MainMenu : MonoBehaviour
         menuMusicSource.mute = isMuted;
         PlayerPrefs.SetInt("MenuMusicMuted", isMuted ? 1 : 0);
         PlayerPrefs.Save();
+
+        musicToggleImage.sprite = isMuted ? musicOffSprite : musicOnSprite;
     }
     public void ToggleAllSounds(bool isMuted)
     {
@@ -45,6 +57,8 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetInt("AllSoundsMuted", isMuted ? 1 : 0);
         audioSource.mute = isMuted;
         PlayerPrefs.Save();
+
+        sfxToggleImage.sprite = isMuted ? sfxOffSprite : sfxOnSprite;
     }
     private void Quit()
     {
