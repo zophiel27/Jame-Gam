@@ -1207,7 +1207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies: 2
-  arrows: 3
+  arrows: 5
   levelCompletedUI: {fileID: 820986617}
   gameOverUI: {fileID: 626733697}
   restartAndBackUI: {fileID: 1516979375}
