@@ -145,4 +145,7 @@ public class GameScript : MonoBehaviour
     public void PlaySound(){
         audioSource.Play();
     }
+    public bool checkLevelCleared(){
+        return levelcleared;
+    }  
 }

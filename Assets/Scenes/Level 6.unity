@@ -1143,6 +1143,11 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 10526322870739638, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
   m_PrefabInstance: {fileID: 1516979374}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1516979377 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3759114429343711387, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
+  m_PrefabInstance: {fileID: 1516979374}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1516979378 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8553849810501555777, guid: 43288eefc6e79634bad5644e5174fb6f, type: 3}
@@ -1215,7 +1220,7 @@ MonoBehaviour:
   ArrowAndScoreUI: {fileID: 1516979378}
   ArrowDecrement: {fileID: 864834424}
   ScoreIncrement: {fileID: 868368282}
-  BonusIncrement: {fileID: 0}
+  BonusIncrement: {fileID: 1516979377}
   NewHighScoreUI: {fileID: 1540417514}
   scoreText: {fileID: 1516979380}
   HighscoreText: {fileID: 1516979379}

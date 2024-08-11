@@ -68,10 +68,13 @@ public class ArrowScript : MonoBehaviour
         }
     }
     private void stopArrow()
-    {    
-        FindObjectOfType<bow>().ResetArrowInAir(); // Reset the flag in PlayerController
-        rb.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
-        is_active = false;
+    {   
+        if(FindObjectOfType<GameScript>().checkLevelCleared() == false) 
+        {
+            FindObjectOfType<bow>().ResetArrowInAir(); // Reset the flag in PlayerController
+            rb.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
+            is_active = false;
+        }
     }
     private void DestroyArrow()
     {

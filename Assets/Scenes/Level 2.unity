@@ -711,6 +711,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 639617369025798995, guid: 696168d03790b9348b96069344b8a1b7, type: 3}
+      propertyPath: m_Size.x
+      value: 7.3391695
+      objectReference: {fileID: 0}
+    - target: {fileID: 639617369025798995, guid: 696168d03790b9348b96069344b8a1b7, type: 3}
+      propertyPath: m_Offset.x
+      value: 2.7390876
+      objectReference: {fileID: 0}
+    - target: {fileID: 639617369025798995, guid: 696168d03790b9348b96069344b8a1b7, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.06047249
+      objectReference: {fileID: 0}
     - target: {fileID: 2133436922247494652, guid: 696168d03790b9348b96069344b8a1b7, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -771,7 +783,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 45
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3756020584799142853, guid: 696168d03790b9348b96069344b8a1b7, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
