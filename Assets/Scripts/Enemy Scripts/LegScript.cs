@@ -16,12 +16,18 @@ public class UpperLeftLegScript : MonoBehaviour
     [ContextMenu("splatter")]
     public void splatter()
     {
-        GameObject blood_position = transform.Find("KneenemyScriptplatter").gameObject;
-        GameObject blood_instance = Instantiate(blood_effect, blood_position.transform.position, Quaternion.Euler(180, 0, 0), blood_position.transform);
-        ParticleSystem ps = blood_instance.GetComponent<ParticleSystem>();
-        enemyScript.PlaySound(1);
-        ps.Play();
-        Destroy(blood_instance, ps.main.duration);
+        GameObject blood_position = transform.Find("KneeSplatter").gameObject;
+        if (blood_position)
+        {
+            GameObject blood_instance = Instantiate(blood_effect, blood_position.transform.position, Quaternion.Euler(180, 0, 0), blood_position.transform);
+            if (blood_instance)
+            {
+                ParticleSystem ps = blood_instance.GetComponent<ParticleSystem>();
+                enemyScript.PlaySound(1);
+                ps.Play();
+                Destroy(blood_instance, ps.main.duration);
+            }
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -51,7 +57,8 @@ public class UpperLeftLegScript : MonoBehaviour
                     else
                     {
                         UpperLeftLegScript upper_leg_script = joint.connectedBody.gameObject.GetComponent<UpperLeftLegScript>();
-                        upper_leg_script.splatter();
+                        if(upper_leg_script)
+                            upper_leg_script.splatter();
                     }
 
                 }

@@ -23,11 +23,14 @@ public class TorsoScript : MonoBehaviour
         string[] game_object_name = { "HeadBloodSplatter", "RightShoulderSplatter", "LeftShoulderSplatter", "LeftHipSplatter", "RightHipSplatter" };
         int[] direction = { 270, 180, 180, 90, 90 };
         GameObject blood_position = transform.Find(game_object_name[key]).gameObject;
-        GameObject blood_instance = Instantiate(blood_effect, blood_position.transform.position, Quaternion.Euler(direction[key], 0, 0), blood_position.transform);
-        ParticleSystem ps = blood_instance.GetComponent<ParticleSystem>();
-        enemyScript.PlaySound(1);
-        ps.Play();
-        Destroy(blood_instance, ps.main.duration);
+        if (blood_position)
+        {
+            GameObject blood_instance = Instantiate(blood_effect, blood_position.transform.position, Quaternion.Euler(direction[key], 0, 0), blood_position.transform);
+            ParticleSystem ps = blood_instance.GetComponent<ParticleSystem>();
+            enemyScript.PlaySound(1);
+            ps.Play();
+            Destroy(blood_instance, ps.main.duration);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
